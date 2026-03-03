@@ -1,0 +1,16 @@
+.A_menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-body);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    margin: 0 auto;
+    width: 100vw;
+}

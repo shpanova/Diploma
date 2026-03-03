@@ -1,0 +1,53 @@
+.Q_logo{
+    display: flex;
+    height: 22px;
+}
+
+.Q_image_little{
+    weight: 240px;
+    border-radius: 2px;
+}
+
+.Q_arrow_orange{
+    width: 12px;
+}
+
+.Q_video{
+    height: 46vw;
+    border-radius: 8px;
+}
+
+.Q_video_little{
+    height: 20vw;
+    border-radius: 4px;
+}
+
+.Q_Image_track {
+    width: 64px;
+    border-radius: 2px;
+}
+
+.Q_Image_cloth{
+    width: 200px;
+    border-radius: 4px;
+}
+
+.Q_Image_style{
+    width: 100%;
+    border-radius: 4px;
+}
+
+.Q_h2_d{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.Q_icon_dec{
+    position: absolute;
+    right: 6vw;
+    margin-top: -48px;
+}

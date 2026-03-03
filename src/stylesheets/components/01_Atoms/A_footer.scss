@@ -1,0 +1,15 @@
+.A_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-blue);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100vw;
+}

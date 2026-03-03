@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+
+body, html{
+    background-color: var(--white-body);
+    width: 88vw;
+    margin: 0 auto;
+    height: 100%;
+}
+
+hr{
+    border: none; 
+    background-color: var(--grey-text); 
+    height: 1px;
+}
+
+
+
+h1{
+    font-family: 'Golos Text VF', sans-serif;
+    font-weight: 500; 
+    font-size: 64px;
+    line-height: 1.0;
+}
+
+h2{
+    font-family: 'Golos Text VF', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.0;
+}
+
+h3{
+    font-family: 'Golos Text VF', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.0;
+}
+
+h4{
+    font-family: 'Golos Text VF', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+h5{
+    font-family: 'PT Root VF', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.1; 
+}
+
+h6{
+    font-family: 'PT Root VF', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.0;
+}
+
+
+p{
+    font-family: 'PT Root VF', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.0; 
+}
+
+a{
+    text-decoration: none;
+    color: var(--black-text);
+}
+
+
+// Вариации стиля текста
+.grey{
+    color: var(--grey-text);
+}
+
+.white{
+    color: var(--white-card);
+}
+
+#blue_bold{
+    font-family: 'Golos Text VF', sans-serif;
+    color: var(--blue-note);
+    font-weight: 500;
+}
+
+.boldVF{
+    font-family: 'Golos Text VF', sans-serif;
+    font-weight: 500;
+}
