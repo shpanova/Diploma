@@ -6,4 +6,9 @@
     background-color: var(--white-card);
     width: 20.5vw;
     border-radius: 8px;
+    cursor: pointer;
+}
+
+.O_card_style:hover {
+    outline: 1px solid var(--light-grey);
 }

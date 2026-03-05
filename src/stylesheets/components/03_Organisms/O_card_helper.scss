@@ -1,0 +1,30 @@
+.O_card_helper{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 16vw;
+    top: 400px;
+    margin-bottom: 120px;
+
+    .A_note{
+        margin-left: -1vw;
+        margin-bottom: 8px;
+    }
+   
+}
+
+.O_card_helper_two{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 6vw;
+    top: 160px;
+    
+    .A_card_helper{
+        margin-left: -0.5vw;
+    }
+
+    .A_note_side{
+        padding-bottom: 12vw;
+    }
+}
