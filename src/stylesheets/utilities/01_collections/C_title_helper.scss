@@ -5,3 +5,16 @@
     margin-top: 160px;
     margin-bottom: 560px;
 }
+
+.C_title_desire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 200px;
+    margin-bottom: 340px;
+
+    h2{
+        text-align: center;
+    }
+}

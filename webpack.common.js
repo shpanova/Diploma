@@ -124,6 +124,14 @@ module.exports = {
       filename: './bachata.html'
     }),
 
+     // Section стили кизомба
+    new HtmlWebpackPlugin({
+      template: './src/desire.html',
+      filename: './desire.html'
+    }),
+
+    
+
     
 
 
