@@ -1,6 +1,13 @@
 .Q_logo{
     display: flex;
     height: 22px;
+    cursor: pointer;
+}
+
+.Q_logo_white{
+    display: flex;
+    height: 22px;
+    cursor: pointer;
 }
 
 .Q_image_little{
@@ -23,7 +30,7 @@
 }
 
 .Q_Image_track {
-    width: 64px;
+    height: 80px;
     border-radius: 2px;
 }
 
@@ -34,6 +41,7 @@
 
 .Q_Image_style{
     width: 100%;
+    height: auto;
     border-radius: 4px;
 }
 
@@ -51,3 +59,47 @@
     right: 6vw;
     margin-top: -48px;
 }
+
+.Q_audio{
+   width: 29vw;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: var(--light-grey);
+    border-radius: 100%;
+    margin-right: 8px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: var(--white-card);
+  padding: 0;
+  width: 100%;
+}
+
+.Q_Image_helper{
+    width: 20vw;
+}
+
+.Q_note{
+    width: 18vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid var(--grey-text);
+    color: var(--grey-text) ;
+}
+
+.Q_bg_image, .Q_bg_image_m{
+    position: absolute;
+    left: 0;
+    margin-top: 220px;
+    z-index: 2;
+}
+
+.Q_bg_image_m{
+    display: none;
+}
+

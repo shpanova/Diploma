@@ -7,23 +7,20 @@
     <analytics></analytics>
 </head>
 <body>
-    <div class="A_menu">
-        <div class="Q_logo"><img src="./images/Logo.svg" alt="логотип"></div>
-        <div class="C_menu">
-            <p><a href="">Справочник</a></p>
-            <p><a href="">Помощник</a></p>
-            <p><a href="">Медиа</a></p>
-        </div>
+   
+
+    <div class="A_back_arrow" onclick="window.location.href='/'">
+        <div><img src="./images/arrow_back.svg" alt="стрелка назад"></div>
+        <p class="grey">Вернуться в справочник</p>
     </div>
 
     <Section class="W_title_block">
-        <!-- Название стиля-->
         <div class="M_title_style_icon">
-        <div class="A_title_description">
-            <h1>Фрейм Ап</h1>
-            <h4 class="grey">(frame up)</h4>
-        </div>
-        <div><img src="./images/Q_icon_dec.svg" alt="иконка декоративная"></div>
+            <div class="A_title_description">
+                <h1>Фрейм Ап</h1>
+                <h4 class="grey">(frame up)</h4>
+            </div>
+            <div><img src="./images/Q_icon_dec.svg" alt="иконка декоративная"></div>
         </div>
 
         <!-- 1 блок о стиле и видео -->
@@ -43,7 +40,7 @@
                     <p>Средний темп <br> разное настроение <br> на полу, каблуки</p>
                     <div class="A_author_video">
                         <div class="Q_arrow_orange"><img src="./images/Arrow-right-orange.svg" alt="стрелка"></div>
-                        <p id="blue_bold">Видео от @gvrl.avri, <br> Аста, хореограф, Москва</p>
+                        <p id="blue_bold">Видео от @gvrl.avri, <br> Музыка: JPOLND – The End</p>
                     </div>
                 </div>
                 <video class="Q_video" src="./Video/frameup.mp4" autoplay muted loop controls controls controlslist="nodownload noplaybackrate noremoteplayback nofullscreen"></video></video>
@@ -64,30 +61,43 @@
          <div class="SO_music_block">
             <div class="A_text_music">
                 <h4 class="white">Стиль позволяет танцевать <br> под любой жанр музыки </h4>
-                <p class="white">рэп, джаз, хип хоп, классика</p>
+                <p style="text-align: right;" class="white">рэп, джаз, хип хоп, классика, <br> r&b, поп, рок и другие</p>
             </div>
 
             <div class="C_two_track">
                 <div class="O_track">
-                    <div class="M_image_name_text">
-                        <div><img class="Q_Image_track" src="./images/frameup/boots.jpg" alt=""></div>
-                        <div class="A_name_music"> 
-                            <h5>Name</h5>
-                            <p>Moby</p>
+                <div class="M_image_name_text">
+                    <div><img class="Q_Image_track" src="./images/frameup/boots.jpg" alt=""></div>
+                    <div class="C_name_play">
+                        <div class="A_name_music">
+                            <h5>Brave education</h5>
+                            <p class="grey">Moby</p>
                         </div>
+                        <audio class="Q_audio" controls loop metadata controlsList="nodownload noplaybackrate"  >
+                            <source src="./audio/framuup.mp3" type="audio/mpeg">
+                         </audio>
+
                     </div>
-                    <p>0:17</p>
                 </div>
-                <div class="O_track">
-                    <div class="M_image_name_text">
-                        <div><img class="Q_Image_track" src="./images/frameup/boots.jpg" alt=""></div>
-                        <div class="A_name_music"> 
-                            <h5>Name</h5>
-                            <p>Moby</p>
+            </div>
+
+            <div class="O_track">
+                <div class="M_image_name_text">
+                    <div><img class="Q_Image_track" src="./images/frameup/boots.jpg" alt=""></div>
+                    <div class="C_name_play">
+                        <div class="A_name_music">
+                            <h5>Название трека</h5>
+                            <p class="grey">Moby</p>
                         </div>
+                        <audio class="Q_audio" controls loop metadata controlsList="nodownload noplaybackrate"  >
+                            <source src="./audio/framuup.mp3" type="audio/mpeg">
+                         </audio>
+
                     </div>
-                    <p>0:17</p>
                 </div>
+            </div>
+
+
             </div>
 
          </div>
@@ -104,7 +114,7 @@
 
          <div class="SO_desire_video">
             <div class="M_video_author_little">
-                <video class="Q_video_little" src="./Video/frameup.mp4" autoplay muted loop controls controls controlslist="nodownload noplaybackrate noremoteplayback nofullscreen"></video></video>
+                <video class="Q_video_little" src="./Video/frameup.mp4" autoplay muted loop="nodownload noplaybackrate noremoteplayback nofullscreen"></video></video>
                 <div class="A_author_video">
                         <div class="Q_arrow_orange"><img src="./images/Arrow-right-orange.svg" alt="стрелка"></div>
                         <p id="blue_bold">Видео от @panova.sh</p>
@@ -113,32 +123,18 @@
 
             <div class="O_desire_all">
                 <div class="M_desire_column">
-                    <div class="A_desire">
+                     
                         <h5 class="boldVF"><span style="color: var(--blue-note)">(1)</span> Хочу танцевать разное <br> настроение</h5>
-                        <h5 class="grey">Стиль дает возможность <br> почувствовать себя кошкой, <br> раскрепощает, </h5>
-                    </div>
-                    <div class="A_desire">
-                        <h5 class="boldVF"><span style="color: var(--blue-note)">(2)</span> Хочу танцевать разное <br> настроение</h5>
-                        <h5 class="grey">Стиль дает возможность <br> почувствовать себя кошкой, <br> раскрепощает, </h5>
-                    </div>
-                    <div class="A_desire">
-                        <h5 class="boldVF"><span style="color: var(--blue-note)">(3)</span> Хочу танцевать разное <br> настроение</h5>
-                        <h5 class="grey">Стиль дает возможность <br> почувствовать себя кошкой, <br> раскрепощает, </h5>
-                    </div>
+                        <h5 class="boldVF"><span style="color: var(--blue-note)">(2)</span> Хочу стать более<br>женственной</h5>
+                        <h5 class="boldVF"><span style="color: var(--blue-note)">(3)</span> Хочу улучшить свою<br>растяжку</h5>
+                     
                 </div>
                 <div class="M_desire_column">
-                    <div class="A_desire">
-                        <h5 class="boldVF"><span style="color: var(--blue-note)">(4)</span> Хочу танцевать разное <br> настроение</h5>
-                        <h5 class="grey">Стиль дает возможность <br> почувствовать себя кошкой, <br> раскрепощает, </h5>
-                    </div>
-                    <div class="A_desire">
-                        <h5 class="boldVF"><span style="color: var(--blue-note)">(5)</span> Хочу танцевать разное <br> настроение</h5>
-                        <h5 class="grey">Стиль дает возможность <br> почувствовать себя кошкой, <br> раскрепощает, </h5>
-                    </div>
-                    <div class="A_desire">
-                        <h5 class="boldVF"><span style="color: var(--blue-note)">(6)</span> Хочу танцевать разное <br> настроение</h5>
-                        <h5 class="grey">Стиль дает возможность <br> почувствовать себя кошкой, <br> раскрепощает, </h5>
-                    </div>
+                     
+                        <h5 class="boldVF"><span style="color: var(--blue-note)">(4)</span> Хочу стать увереннее<br> и смелее</h5>                
+                        <h5 class="boldVF"><span style="color: var(--blue-note)">(5)</span> Хочу получать красивые<br>видео после съемок</h5>                    
+                        <h5 class="boldVF"><span style="color: var(--blue-note)">(6)</span> Хочу токружить себя <br>интересными людьми</h5>
+                     
                 </div>
             </div>
          </div>
@@ -155,46 +151,39 @@
 
         <div class="O_card_text">
              <div class="A_text_cloth">
-                <h4>Стиль позволяет танцевать <br> под любой жанр музыки </h4>
-                <p class="grey">рэп, джаз, хип хоп, классика</p>
+                <h4>Самое главное — стрипы,<br>одежда по настроению</h4>
+                <p style="text-align: right;" class="grey">Листай влево, <br>чтобы увидеть больше</p>
             </div>
 
             <div class="M_card_all">
                 <div class="A_card_cloth">
-                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/pant.jpg" alt="широкие штаны"></div>
+                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/b.webp" alt="широкие штаны"></div>
+                    <h6 id="blue_bold">Лосины</h6>
+                </div>
+                <div class="A_card_cloth">
+                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/f.webp" alt=""></div>
+                    <h6 id="blue_bold">Футболка</h6>
+                </div>
+                <div class="A_card_cloth">
+                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/k.webp" alt=""></div>
+                    <h6 id="blue_bold">Комбинезон</h6>
+                </div>
+                <div class="A_card_cloth">
+                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/kf.webp" alt=""></div>
+                    <h6 id="blue_bold">Кофта</h6>
+                </div>
+                <div class="A_card_cloth">
+                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/m.webp" alt=""></div>
+                    <h6 id="blue_bold">Майка</h6>
+                </div>
+                <div class="A_card_cloth">
+                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/sh.webp" alt=""></div>
                     <h6 id="blue_bold">Широкие штаны</h6>
                 </div>
                 <div class="A_card_cloth">
-                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/pant.jpg" alt=""></div>
-                    <h6 id="blue_bold">Широкие штаны</h6>
+                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/t.webp" alt=""></div>
+                    <h6 id="blue_bold">Широкая кофта</h6>
                 </div>
-                <div class="A_card_cloth">
-                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/pant.jpg" alt=""></div>
-                    <h6 id="blue_bold">Широкие штаны</h6>
-                </div>
-                <div class="A_card_cloth">
-                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/pant.jpg" alt=""></div>
-                    <h6 id="blue_bold">Широкие штаны</h6>
-                </div>
-                <div class="A_card_cloth">
-                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/pant.jpg" alt=""></div>
-                    <h6 id="blue_bold">Широкие штаны</h6>
-                </div>
-                <div class="A_card_cloth">
-                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/pant.jpg" alt=""></div>
-                    <h6 id="blue_bold">Широкие штаны</h6>
-                </div>
-                <div class="A_card_cloth">
-                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/pant.jpg" alt=""></div>
-                    <h6 id="blue_bold">Широкие штаны</h6>
-                </div>
-                <div class="A_card_cloth">
-                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/pant.jpg" alt=""></div>
-                    <h6 id="blue_bold">Широкие штаны</h6>
-                </div>
-                <div class="A_card_cloth">
-                    <div><img class="Q_Image_cloth" src="./images/frameup/Cloth/pant.jpg" alt=""></div>
-                    <h6 id="blue_bold">Широкие штаны</h6>
                 </div>
             </div>
         </div>
@@ -211,7 +200,23 @@
 
         <div class="M_name">
             <div class="A_desire">
-                <h5 class="boldVF">Имя Фамилия</h5>
+                <h5 class="boldVF">Юрасова Анастасия </h5>
+                <h5 class="grey">Создатель стиля, <br> @yuraskina</h5>
+            </div>
+            <div class="A_desire">
+                <h5 class="boldVF">Подшивалова Ирина</h5>
+                <h5 class="grey">Хореграф, Москва,<br> @podshival</h5>
+            </div>
+            <div class="A_desire">
+                <h5 class="boldVF">Попова Дарья</h5>
+                <h5 class="grey">Хореграф, Москва,<br> @dashaa_popovaa</h5>
+            </div>
+            <div class="A_desire">
+                <h5 class="boldVF">Смирнова Мария</h5>
+                <h5 class="grey">Хореграф, Москва,<br> @maryysmirnoova</h5>
+            </div>
+            <!-- <div class="A_desire">
+                <h5 class="boldVF">Бадаева Анастасия</h5>
                 <h5 class="grey">ник в соцсетях и кто это</h5>
             </div>
             <div class="A_desire">
@@ -225,23 +230,7 @@
             <div class="A_desire">
                 <h5 class="boldVF">Имя Фамилия</h5>
                 <h5 class="grey">ник в соцсетях и кто это</h5>
-            </div>
-            <div class="A_desire">
-                <h5 class="boldVF">Имя Фамилия</h5>
-                <h5 class="grey">ник в соцсетях и кто это</h5>
-            </div>
-            <div class="A_desire">
-                <h5 class="boldVF">Имя Фамилия</h5>
-                <h5 class="grey">ник в соцсетях и кто это</h5>
-            </div>
-            <div class="A_desire">
-                <h5 class="boldVF">Имя Фамилия</h5>
-                <h5 class="grey">ник в соцсетях и кто это</h5>
-            </div>
-            <div class="A_desire">
-                <h5 class="boldVF">Имя Фамилия</h5>
-                <h5 class="grey">ник в соцсетях и кто это</h5>
-            </div>
+            </div> -->
         </div>
       </section>
 
@@ -255,7 +244,7 @@
         </div>
 
         <div class="SO_catalog_style">
-            <div class="O_card_style">
+            <!-- <div onclick="window.location.href='frameup.html'" class="O_card_style">
                 <div class="M_rating">
                     <p>Темп: средний</p>
                     <div class="A_rating">
@@ -272,84 +261,120 @@
                     <button class="A_button_arrow"><img class="Q_arrow_button" src="./images/Arrow_button.svg" alt=""></button>
                 </div>
 
-                <div><img class="Q_Image_style" src="./images/style/frameup.jpg" alt=""></div>
+                <div><img class="Q_Image_style" src="./images/style/frameup.webp" alt=""></div>
 
                 <div class="C_tag_card">
                     <h6 class="grey">Разное</h6>
                     <h6 class="grey">Каблуки</h6>
                     <h6 class="grey">На полу</h6>
+                </div>
+
+            </div> -->
+
+            <div class="O_card_style" onclick="window.location.href='afro.html'">
+                <div class="M_rating">
+                    <p>Темп: быстрый</p>
+                    <div class="A_rating">
+                        <div><img class="Q_ellipse" src="./images/style/Ellipse_field.svg" alt=""></div>
+                        <div><img class="Q_ellipse" src="./images/style/Ellipse_field.svg" alt=""></div>
+                        <div><img class="Q_ellipse" src="./images/style/Ellipse_field.svg" alt=""></div>
+                        <div><img class="Q_ellipse" src="./images/style/Ellipse_field.svg" alt=""></div>
+                        <div><img class="Q_ellipse" src="./images/style/Ellipse_stroke.svg" alt=""></div>
+                    </div>
+                </div>
+
+                <div class="M_title_button">
+                    <h4 class="boldVF">Афро</h4>
+                    <button class="A_button_arrow"><img class="Q_arrow_button" src="./images/Arrow_button.svg" alt=""></button>
+                </div>
+
+                <div><img class="Q_Image_style" src="./images/style/afro.webp" alt=""></div>
+
+                <div class="C_tag_card">
+                    <h6 class="grey">Эмоции</h6>
+                    <h6 class="grey">Все тело</h6>
+                    <h6 class="grey">В потоке</h6>
                 </div>
 
             </div>
 
-            <div class="O_card_style">
+            <div class="O_card_style" onclick="window.location.href='kizomba.html'">
                 <div class="M_rating">
-                    <p>Темп: средний</p>
+                    <p>Темп: медленный</p>
                     <div class="A_rating">
                         <div><img class="Q_ellipse" src="./images/style/Ellipse_field.svg" alt=""></div>
-                        <div><img class="Q_ellipse" src="./images/style/Ellipse_field.svg" alt=""></div>
-                        <div><img class="Q_ellipse" src="./images/style/Ellipse_field.svg" alt=""></div>
+                        <div><img class="Q_ellipse" src="./images/style/Ellipse_stroke.svg" alt=""></div>
+                        <div><img class="Q_ellipse" src="./images/style/Ellipse_stroke.svg" alt=""></div>
                         <div><img class="Q_ellipse" src="./images/style/Ellipse_stroke.svg" alt=""></div>
                         <div><img class="Q_ellipse" src="./images/style/Ellipse_stroke.svg" alt=""></div>
                     </div>
                 </div>
 
                 <div class="M_title_button">
-                    <h4 class="boldVF">Фрейм Ап</h4>
+                    <h4 class="boldVF">Кизомба</h4>
                     <button class="A_button_arrow"><img class="Q_arrow_button" src="./images/Arrow_button.svg" alt=""></button>
                 </div>
 
-                <div><img class="Q_Image_style" src="./images/style/frameup.jpg" alt=""></div>
+                <div><img class="Q_Image_style" src="./images/style/kizomba.webp" alt=""></div>
 
                 <div class="C_tag_card">
-                    <h6 class="grey">Разное</h6>
-                    <h6 class="grey">Каблуки</h6>
-                    <h6 class="grey">На полу</h6>
+                    <h6 class="grey">Чувства</h6>
+                    <h6 class="grey">В паре</h6>
+                    <h6 class="grey">В потоке</h6>
                 </div>
 
             </div>
 
-            <div class="O_card_style">
+            <div class="O_card_style" onclick="window.location.href='bachata.html'">
                 <div class="M_rating">
-                    <p>Темп: средний</p>
+                    <p>Темп: ускоренный</p>
                     <div class="A_rating">
                         <div><img class="Q_ellipse" src="./images/style/Ellipse_field.svg" alt=""></div>
                         <div><img class="Q_ellipse" src="./images/style/Ellipse_field.svg" alt=""></div>
                         <div><img class="Q_ellipse" src="./images/style/Ellipse_field.svg" alt=""></div>
-                        <div><img class="Q_ellipse" src="./images/style/Ellipse_stroke.svg" alt=""></div>
-                        <div><img class="Q_ellipse" src="./images/style/Ellipse_stroke.svg" alt=""></div>
+                        <div><img class="Q_ellipse" src="./images/style/Ellipse_field.svg" alt=""></div>
+                        <div><img class="Q_ellipse" src="./images/style/Ellipse_field.svg" alt=""></div>
                     </div>
                 </div>
 
                 <div class="M_title_button">
-                    <h4 class="boldVF">Фрейм Ап</h4>
+                    <h4 class="boldVF">Бачата</h4>
                     <button class="A_button_arrow"><img class="Q_arrow_button" src="./images/Arrow_button.svg" alt=""></button>
                 </div>
 
-                <div><img class="Q_Image_style" src="./images/style/frameup.jpg" alt=""></div>
+                <div><img class="Q_Image_style" src="./images/style/bachata.webp" alt=""></div>
 
                 <div class="C_tag_card">
-                    <h6 class="grey">Разное</h6>
-                    <h6 class="grey">Каблуки</h6>
-                    <h6 class="grey">На полу</h6>
+                    <h6 class="grey">Игривое</h6>
+                    <h6 class="grey">В паре</h6>
+                    <h6 class="grey">В потоке</h6>
                 </div>
-
             </div>
 
         </div>
 
       </section>
 
+    <!-- Меню -->
+     <div class="A_menu">
+        <div onclick="window.location.href='/'" class="Q_logo"><img src="./images/Logo.svg" alt="логотип"></div>
+        <div class="C_menu">
+            <p><a href="/">Справочник</a></p>
+            <p><a class="grey" href="helper.html">Помощник</a></p>
+            <p><a class="grey" href="">Медиа</a></p>
+        </div>
+    </div>
+
     <!-- Футер -->
     <div class="A_footer">
-        <div><img class="Q_logo_white" src="./images/Logo_white.svg" alt="логотип"></div>
+        <div onclick="window.location.href='/'"><img class="Q_logo_white" src="./images/Logo_white.svg" alt="логотип"></div>
         <div class="С_footer">
-            <p><a class="white" href="">Справочник</a></p>
-            <p><a class="white" href="">Помощник</a></p>
+            <p><a class="white" href="/">Справочник</a></p>
+            <p><a class="white" href="helper.html">Помощник</a></p>
             <p><a class="white" href="">Медиа</a></p>
         </div>
         <p class="white">Автор: Александра Панова</p>
-    </div>
+    </div> 
 
 </body>
 </html>

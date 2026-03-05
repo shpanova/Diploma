@@ -1,0 +1,33 @@
+.A_button_blue{
+    height: 56px;
+    width: 14vw;
+    border: none;
+    background-color: var(--blue-note);
+    border-radius: 8px;
+
+    a{
+        font-size: 16px;
+        font-family: 'Golos Text VF', sans-serif;
+        font-weight: 500;
+        color: var(--white-card);
+    }
+
+    cursor: pointer;
+}
+
+.A_button_border, .A_button_border_1, .A_button_border_2, .A_button_border_3, .A_button_border_4 {
+    height: 56px;
+    width: 14vw;
+    border: 1px solid var(--grey-text);
+    background-color: var(--white-body);
+    border-radius: 8px;
+
+    a{
+        font-size: 16px;
+        font-family: 'Golos Text VF', sans-serif;
+        font-weight: 500;
+        color: var(--grey-text);
+    }
+
+    cursor: pointer;
+}

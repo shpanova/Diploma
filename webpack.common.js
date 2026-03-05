@@ -100,10 +100,44 @@ module.exports = {
       filename: './index.html'
     }),
 
-    // Section
+    // Section стили фрейм ап
     new HtmlWebpackPlugin({
       template: './src/frameup.html',
       filename: './frameup.html'
+    }),
+
+    // Section стили афро
+    new HtmlWebpackPlugin({
+      template: './src/afro.html',
+      filename: './afro.html'
+    }),
+
+    // Section стили кизомба
+    new HtmlWebpackPlugin({
+      template: './src/kizomba.html',
+      filename: './kizomba.html'
+    }),
+
+    // Section стили кизомба
+    new HtmlWebpackPlugin({
+      template: './src/bachata.html',
+      filename: './bachata.html'
+    }),
+
+    
+
+
+    // Section музыка
+    new HtmlWebpackPlugin({
+      template: './src/music.html',
+      filename: './music.html'
+    }),
+
+
+    // Section помощник
+    new HtmlWebpackPlugin({
+      template: './src/helper.html',
+      filename: './helper.html'
     }),
 
 

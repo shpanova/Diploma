@@ -1,0 +1,16 @@
+.A_card_helper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: var(--white-card);
+    padding-left: 1.5vw;
+    width: 23vw;
+    border-radius: 4px;
+}
+
+.A_card_helper:hover {
+    outline: 1px solid var(--light-grey);
+}

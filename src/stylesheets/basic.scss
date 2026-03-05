@@ -7,7 +7,19 @@ body, html{
     width: 88vw;
     margin: 0 auto;
     height: 100%;
+    font-family: 'Golos Text VF', sans-serif;
+    font-weight: 400; 
 }
+
+.n, .o, .k{
+    display: none;
+}
+
+.v{
+    z-index: 20;
+}
+
+
 
 hr{
     border: none; 
@@ -64,7 +76,7 @@ p{
     font-family: 'PT Root VF', sans-serif;
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.0; 
+    line-height: 1.1; 
 }
 
 a{
@@ -88,7 +100,9 @@ a{
     font-weight: 500;
 }
 
+
+
 .boldVF{
-    font-family: 'Golos Text VF', sans-serif;
-    font-weight: 500;
+    font-family: 'PT Root VF', sans-serif;
+    font-weight: 500; 
 }

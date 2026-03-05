@@ -1,0 +1,13 @@
+.M_card_button{
+    display: flex;
+    flex-direction: column;
+
+    .A_button_arrow{
+        position: absolute;
+        margin-top: 2vw;
+        margin-left: 2vw;
+    }
+
+    cursor: pointer
+}
+  

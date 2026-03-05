@@ -1,0 +1,22 @@
+.A_note{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 16px;
+
+    .Q_cursor{
+        rotate: -45deg;
+    }
+}
+
+.A_note_side{
+     display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 16px;
+
+    .Q_cursor{
+        rotate: 45deg;
+    }
+
+}
