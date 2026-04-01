@@ -8,7 +8,8 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
+    articles: './src/articleContent.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -91,43 +92,49 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
-      chunkFilename: '[id].[contenthash].css'
+      chunkFilename: '[id].[contenthash].css',
     }),
 
     // Index
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: './index.html'
+      filename: './index.html',
+      chunks: ['index']
     }),
 
     // Section стили фрейм ап
     new HtmlWebpackPlugin({
       template: './src/frameup.html',
-      filename: './frameup.html'
+      filename: './frameup.html',
+      chunks: ['index']
     }),
 
     // Section стили афро
     new HtmlWebpackPlugin({
       template: './src/afro.html',
-      filename: './afro.html'
+      filename: './afro.html',
+      chunks: ['index']
     }),
 
     // Section стили кизомба
     new HtmlWebpackPlugin({
       template: './src/kizomba.html',
-      filename: './kizomba.html'
+      filename: './kizomba.html',
+      chunks: ['index']
     }),
 
     // Section стили кизомба
     new HtmlWebpackPlugin({
       template: './src/bachata.html',
-      filename: './bachata.html'
+      filename: './bachata.html',
+      chunks: ['index']
     }),
 
      // Section стили кизомба
     new HtmlWebpackPlugin({
       template: './src/desire.html',
-      filename: './desire.html'
+      filename: './desire.html',
+      chunks: ['index']
     }),
 
     
@@ -138,24 +145,27 @@ module.exports = {
     // Section музыка
     new HtmlWebpackPlugin({
       template: './src/music.html',
-      filename: './music.html'
+      filename: './music.html',
+      chunks: ['index']
     }),
 
 
     // Section помощник
     new HtmlWebpackPlugin({
       template: './src/helper.html',
-      filename: './helper.html'
+      filename: './helper.html',
+      chunks: ['index']
     }),
 
 
 
     
 
-    // Section помощник
+    // Section статьи
     new HtmlWebpackPlugin({
       template: './src/Articles/RosesStage.html',
-      filename: './Articles/RosesStage.html'
+      filename: './Articles/RosesStage.html',
+      chunks: ['articles']
     }),
 
 
