@@ -150,6 +150,15 @@ module.exports = {
 
 
 
+    
+
+    // Section помощник
+    new HtmlWebpackPlugin({
+      template: './src/Articles/RosesStage.html',
+      filename: './Articles/RosesStage.html'
+    }),
+
+
     // Partials
     new HtmlWebpackPartialsPlugin([
       {
