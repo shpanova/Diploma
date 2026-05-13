@@ -22,17 +22,23 @@ function getArticleContent() {
         result.forEach((record) => {
           content.push({
             id: record.id,
+            note: record.fields['Note'],
             page: record.fields['ID'],
             title: record.fields['Title'],
             tag: record.fields['Tag'],
             description: record.fields['Description'],
             time: record.fields['Time'],
-            cover: record.fields['Cover']
+            cover: record.fields['Cover'],
+            text: record.fields['Content'],
+            photo: record.fields['Photo'],
+            about: record.fields['About']
+
           })
         })
 
         resolve(content)
       })
+
   })
 }
 
@@ -47,24 +53,35 @@ function initArticleContent() {
 }
 
 function createArticleContent(stroke) {
-  let { title, tag, description, time, cover} = stroke
+  let { title, tag, description, time, cover, text, note, photo, about} = stroke
 
   console.log(
     'ok'
   )
 
   const cover_img = document.querySelector('.cover_img')
-  const tag_one = document.querySelector('.tag_one')
-  const title_cover = document.querySelector('.title_cover')
-  const des = document.querySelector('.des')
-  const time_read = document.querySelector('.time_read')
+  const tag_white = document.querySelector('.Q_tag_white')
+  const title_cover_article = document.querySelector('.Q_title_cover_article')
+  const des = document.querySelector('.Q_des')
+  const time_read = document.querySelector('.Q_time_read')
+  const text1 = document.querySelector('.A_content')
+  const note_cover = document.querySelector('.Q_note_cover')
+  const photo_article = document.querySelector('.Q_photo_article')
+  const about_nomi = document.querySelector('.A_about_nomi')
 
-  tag_one.innerHTML = tag
-  title_cover.innerHTML = title
+
+  tag_white.innerHTML = tag
+  title_cover_article.innerHTML = title
   des.innerHTML = description
   time_read.innerHTML = time
+  text1.innerHTML = text
+  note_cover.innerHTML = note
+  about_nomi.innerHTML = about
+  
+
 
   cover_img.style.backgroundImage = `url(${cover})`
+  photo_article.style.backgroundImage = `url(${photo})`
 
 
 

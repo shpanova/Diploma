@@ -1,0 +1,119 @@
+.Q_tag_white, .Q_title_cover_article, .Q_des, .Q_time_read, .Q_note_cover{
+    color: var(--white-card);
+}
+
+.Q_title_cover_article {
+    width: 40vw;
+}
+
+.A_title_des_article_cover {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.A_date_time_article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.C_text_tag_article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cover_img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 32px;
+    height: 22vw;
+    border-radius: 8px;
+    margin-top: 32px;
+}
+
+.M_article_content{
+    width: 38vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 64px;
+}
+
+.O_article_content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 64px;
+}
+
+.Q_photo_article{
+    width: 38vw;
+    height: 16vw;
+    border-radius: 8px;
+    margin-top: 48px;
+}
+
+.A_photo_des{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.C_title_icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.Q_text_content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 40px;
+    color: var(--dark-blue);
+}
+
+.Q_photo_des_art{
+    color: var(--grey-text);
+}
+
+.A_about_nomi{
+    width: 38vw;
+}
+
+.A_row_nomi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .Q_nomi{
+        display: flex;
+        flex-direction: column;
+        width: 16vw;
+        gap: 24px;
+        color: var(--dark-blue);
+
+        h5{
+            font-weight: 600;
+        }
+    }
+}
+
+.M_cataloge_nomination{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 40px;
+}
+
+

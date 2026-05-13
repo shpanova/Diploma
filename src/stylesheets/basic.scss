@@ -11,19 +11,16 @@ body, html{
     font-weight: 400; 
 }
 
-.n, .o, .k{
-    display: none;
-}
-
-.v{
-    z-index: 20;
-}
-
-
 
 hr{
     border: none; 
     background-color: var(--grey-text); 
+    height: 1px;
+}
+
+.Q_grey_line{
+    border: none; 
+    background-color: var(--light-grey); 
     height: 1px;
 }
 
@@ -33,47 +30,47 @@ h1{
     font-family: 'Golos Text VF', sans-serif;
     font-weight: 500; 
     font-size: 64px;
-    line-height: 1.0;
+    line-height: 1.1;
 }
 
 h2{
     font-family: 'Golos Text VF', sans-serif;
     font-weight: 500;
-    font-size: 48px;
-    line-height: 1.0;
+    font-size: 56px;
+    line-height: 1.1;
 }
 
 h3{
     font-family: 'Golos Text VF', sans-serif;
     font-weight: 500;
     font-size: 40px;
-    line-height: 1.0;
+    line-height: 1.1;
 }
 
 h4{
     font-family: 'Golos Text VF', sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 32px;
     line-height: 1.1;
 }
 
 h5{
-    font-family: 'PT Root VF', sans-serif;
+    font-family: 'Golos Text VF', sans-serif;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.1; 
 }
 
 h6{
-    font-family: 'PT Root VF', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 1.0;
+    font-size: 22px;
+    line-height: 1.1;
 }
 
 
 p{
-    font-family: 'PT Root VF', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.1; 
@@ -84,10 +81,17 @@ a{
     color: var(--black-text);
 }
 
+.n, .o, .k{
+    display: none;
+}
 
 // Вариации стиля текста
 .grey{
     color: var(--grey-text);
+}
+
+.orange {
+    color: var(--orange-accent);
 }
 
 .white{
@@ -101,8 +105,14 @@ a{
 }
 
 
-
 .boldVF{
     font-family: 'PT Root VF', sans-serif;
     font-weight: 500; 
+}
+
+@media screen and (max-width: 834px){
+    .A_menu{
+        background-color: bisque;
+    }
+
 }

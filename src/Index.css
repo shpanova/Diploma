@@ -2,6 +2,7 @@
 @import 'stylesheets/fonts.scss';
 @import 'stylesheets/vars.scss';
 @import 'stylesheets/basic.scss';
+@import 'stylesheets/article.scss';
 @import './stylesheets/particles/Quarks.scss';
 @import './stylesheets/utilities/01_collections/C_menu.scss';
 @import './stylesheets/utilities/01_collections/C_two_track.scss';
@@ -54,5 +55,6 @@
 @import './stylesheets/components/04_Superorganisms/SO_music_block.scss';
 @import './stylesheets/components/04_Superorganisms/SO_desire_video.scss';
 @import './stylesheets/components/04_Superorganisms/SO_catalog_style.scss';
+@import 'stylesheets/Adaptive.scss';
 
 

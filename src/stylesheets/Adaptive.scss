@@ -1,0 +1,103 @@
+@media screen and (max-width: 834px){
+
+    body, html{
+    margin: 0 auto;
+    background-color: var(--white-body);
+    width: 94vw;
+    overflow-x: hidden;
+   
+    }
+    h1{
+        font-size: 40px;
+        color: aqua;
+    }
+
+    h2{
+        font-size: 40px;
+        color: red;
+    }
+
+    h3{
+        font-size: 32px;
+        color: aqua;
+    }
+
+    h4{
+        font-size: 22px;
+        color: orchid;
+    }
+
+    h5{
+        font-size: 22px;
+        color: green;
+    }
+
+    h6{
+        font-size: 20px;
+        color: yellow;
+    }
+
+    p{
+        font-size: 16px;
+        color: burlywood;
+    }
+
+    .Q_line{
+        width: 4px;
+    }
+
+    .A_menu{
+        background-color: rgb(166, 79, 79);
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    .W_1_block_style{
+        width: 100%;
+    }
+
+    .M_title_style_icon{
+        width: 100%;
+    }
+
+    .O_text_video_first{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 24px;
+
+    }
+
+    .M_criteria_author{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        width: 100%;
+
+        .A_author_video{
+            width: 170px;
+        }
+    }
+
+    .Q_video{
+        height: 64vw;
+    }
+
+    .A_Image_description{
+        gap: 44px;
+
+        .Q_image_little{
+            width: 152px;
+        }
+    }
+
+    .M_about_image{
+        height: auto;
+    }
+
+
+
+    .A_footer{
+        background-color: black;
+    }
+}
