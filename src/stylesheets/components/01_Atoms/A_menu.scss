@@ -1,11 +1,12 @@
-.A_menu{
+/* ВАШИ СТИЛИ ДЛЯ ВСЕГО БЛОКА МЕНЮ */
+.A_menu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: var(--white-body);
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 20px;
+    padding-bottom: 28px;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,7 +14,45 @@
     padding-right: 6vw;
     margin: 0 auto;
     width: 100%;
-    z-index: 9999 !important; 
+    z-index: 9999 !important;
+}
+
+/* СТИЛИ ДЛЯ КОНТЕЙНЕРА С ССЫЛКАМИ */
+.C_menu {
+    display: flex;
+    flex-direction: row;
+    gap: 80px; 
+    align-items: center;
+}
+
+/* СТИЛИ ДЛЯ ССЫЛОК В МЕНЮ */
+.C_menu a {
+    font-family: 'Golos Text VF', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none; 
+    color: var(--black-text); 
+    padding-bottom: 6px; 
+    border-bottom: 3px solid transparent; 
+    transition: color 0.2s ease; 
 }
 
 
+.C_menu a.grey {
+    color: var(--grey-text);
+}
+
+.C_menu a.active {
+    color: var(--black-text); 
+    border-bottom-color: var(--orange-accent); 
+}
+
+
+.C_menu a:hover {
+    color: var(--black-text);
+}
+
+.Q_logo,
+.C_menu a {
+    cursor: pointer !important;
+}

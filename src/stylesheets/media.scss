@@ -1,0 +1,248 @@
+.C_more_about_style{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 120px;
+}
+
+
+
+.C_first_media_art{
+    background-image: var(--blue-gradient);
+    border-radius: 10px;
+    padding: 0px 40px 64px 40px;
+    margin-top: 64px;
+    margin-bottom: 120px;
+}
+
+.C_first_media_art{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+
+    h6{
+        color: var(--white-card);
+        font-weight: 400;
+    }
+}
+
+.C_card_about_service{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.M_card_about_service_big{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 64px;
+    background-color: var(--white-body);
+    border-radius: 0 0 8px 8px;
+    padding: 56px 32px 32px 32px;
+    width: 34vw;
+    height: 28vw;
+}
+
+.M_card_about_service_little{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 64px;
+    background-color: var(--white-body);
+    border-radius: 0 0 8px 8px;
+    padding: 56px 32px 32px 32px;
+    width: 28vw;
+    height: 28vw;
+}
+
+// _____подборки статей______
+
+.A_media_title_selection{
+    h5{
+        text-align: center;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--white-card);
+}
+
+.M_selection_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22vw;
+    background-image: url('https://raw.githubusercontent.com/shpanova/Diploma/refs/heads/main/src/images/articles/Cover1.jpg');
+    border-radius: 8px;
+    height: 22vw;
+    padding-top: 40px;
+}
+
+.O_selection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 1vw;
+    padding: 1.5vw 1.5vw;
+    background-color: var(--white-card);
+    width: 71vw;
+    border-radius: 10px;
+}
+
+.C_selection{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-bottom: 120px;
+}
+
+// ____карточки медиа_______
+
+.C_media_cards{
+ display: flex;
+ flex-direction: row;
+ gap: 2vw;
+ flex-wrap: wrap;  
+}
+
+.Q_more_btn {
+  display: block;
+  cursor: pointer;
+  font-family: 'Golos Text VF', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--grey-text);
+  border: none;
+  background-color: var(--white-body);
+  text-decoration: underline;
+}
+
+.Q_more_btn:hover {
+  color: var(--black-text);
+}
+
+
+.C_media_block{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.C_title_cataloge{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.C_tag_all_media{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 16px;
+}
+
+.A_tag_media{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.1;
+    color: var(--grey-text);
+    background-color: var(--light-grey-tag);
+    padding: 12px 24px;
+    border: 1px solid var(--light-grey-tag);
+    border-radius: 100px;
+}
+
+
+.A_tag_media:hover { 
+    display: block;
+    cursor: pointer;
+    border-color: var(--grey-text);
+        
+}
+
+
+.A_tag_media.active{
+    border: 1px solid var(--orange-accent); 
+    background-color: var(--orange-accent);
+    color: var(--white-card);
+
+}
+
+
+.Q_cover_media{
+    width: 16vw;
+    height: 10vw;
+    border-radius: 4px;
+}
+
+.A_img_button_cataloge{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.A_tag_time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Q_tag_media{
+    padding: 8px 16px;
+    background-color: var(--medium-blue);
+    border-radius: 4px;
+    color: var(--blue-note);
+}
+
+.C_tag_title_time{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.M_card_cataloge_media{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28vw;
+    height: 28vw;
+    padding: 32px;
+    background-color: var(--white-card);
+    border-radius: 8px;
+    cursor: pointer !important;
+
+    .Q_time_read{
+        color: var(--grey-text);
+    }
+}
+
+.M_card_cataloge_media:hover{
+    outline: 1px solid var(--light-grey);
+}
+
+
+
+
+// <div class="M_card_cataloge_media">
+//             <div class="C_tag_title_time">
+//                 <div class="A_tag_time">
+//                     <p class="Q_tag_media"></p>
+//                     <p class="Q_time_read"></p>
+//                 </div>  
+//                 <h5 class="Q_title_media"></h5>            
+//             </div>
+
+//             <div class="A_img_button_cataloge">
+//                 <div class="Q_cover_media"></div> 
+//                 <div class="A_button_arrow_media"></div> 
+//             </div>
+//         </div>

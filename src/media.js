@@ -1,7 +1,9 @@
 
 import './index.css'
 
-import Airtable from 'airtable'
+import Airtable from 'airtable';
+import arrowSvg from './images/Arrow_button.svg';
+
 
 const token =
   'patMqZk2Akn5UHWfm.48f5f0966f6908ad92e8c86f092d706c79770163860173f2ebc99e60bc7aa57b'
@@ -12,162 +14,250 @@ Airtable.configure({
 })
 var base = Airtable.base('appwl7ytcI8w3EdWC')
 
+
+// Глобальное состояние приложения
+let content = []; 
+let filteredContent = []; 
+let currentIndex = 0; 
+const cardsPerPage = 3; 
+
+/**
+ * Получение данных из Airtable с проверкой полей
+ */
 function getArticleContent() {
   return new Promise((resolve, reject) => {
-    const content = []
+    const contentData = [];
 
     base('Table 2')
       .select({ maxRecords: 100 })
       .firstPage()
       .then((result) => {
         result.forEach((record) => {
-          content.push({
+          const coverField = record.fields['CoverMedia'];
+          let coverUrl = '';
+
+          // Безопасное извлечение URL картинки
+          if (coverField) {
+            if (Array.isArray(coverField) && coverField[0] && coverField[0].url) {
+              coverUrl = coverField[0].url;
+            } else if (typeof coverField === 'string') {
+              coverUrl = coverField;
+            }
+          }
+
+          contentData.push({
             id: record.id,
-            title: record.fields['NameMedia'],
-            tags: record.fields['TagsMedia'],
-            time: record.fields['TimeMedia'],
-            note: record.fields['NoteMedia'],
-            cover: record.fields['CoverMedia']
-          })
-        })
+            title: record.fields['NameMedia'] || 'Без названия',
+            tags: record.fields['TagsMedia'] || '',
+            time: record.fields['TimeMedia'] || '',
+            note: record.fields['NoteMedia'] || '',
+            cover: coverUrl, 
+            butt: record.fields['ButtMedia'] || '' 
+          });
+        });
 
-        resolve(content)
+        resolve(contentData);
       })
-  })
+      .catch((err) => {
+        reject(err);
+      });
+  });
 }
 
+/**
+ * Порционный вывод карточек на страницу
+ */
+function renderCards() {
+  const nextCards = filteredContent.slice(currentIndex, currentIndex + cardsPerPage);
+  
+  nextCards.forEach((stroke) => {
+    createArticleContent(stroke);
+  });
+
+  currentIndex += cardsPerPage;
+
+  // Управление видимостью кнопки "Смотреть еще"
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  if (loadMoreBtn) {
+    loadMoreBtn.style.display = currentIndex >= filteredContent.length ? 'none' : 'inline-block';
+  }
+}
+
+/**
+ * Инициализация контента и сброс контейнера
+ */
 function initArticleContent() {
-  const href = window.location.href.split('/').pop().split('.')[0]
+  filteredContent = [...content];
+  currentIndex = 0;
+  
+  const container = document.querySelector('.C_media_cards');
+  if (container) container.innerHTML = '';
 
-  content.forEach((stroke) => {
-    createArticleContent(stroke)
-    // if (stroke.page === href) {
-    //   createArticleContent(stroke)
-    // }
-  })
+  renderCards();
+  setupFilters(); 
 }
 
+/**
+ * Создание DOM-структуры карточки
+ */
 function createArticleContent(stroke) {
-  let { title, tags, time, note, cover } = stroke
+  const { title, tags, time, cover, butt } = stroke;
 
-  console.log('da')
+  // Создаем карточку как полноценную ссылку
+  const card = document.createElement('a');
+  card.classList.add('M_card_cataloge_media');
+  
+  // Принудительно задаем стиль курсора и изоляцию мыши для вложенных элементов
+  card.style.setProperty('cursor', 'pointer', 'important');
+  
+  if (butt && typeof butt === 'string' && butt.trim() !== '') {
+    card.setAttribute('href', butt);
+  } else {
+    card.setAttribute('href', '#');
+  }
 
-  const cover_media = document.createElement('div')
-  const tag_media = document.createElement('div')
-  const note_cover = document.createElement('div')
-  const time_read = document.createElement('div')
-  const title_media = document.createElement('div')
+  // Обработка тегов фильтрации
+  const tagsString = Array.isArray(tags) ? tags.join(', ') : tags;
+  card.setAttribute('data-card-tags', (tagsString || '').toLowerCase());
 
-  cover_media.classList.add('A_cover_media')
-  tag_media.classList.add('A_tag_media')
-  note_cover.classList.add('A_note_cover')
-  time_read.classList.add('A_time_read')
-  title_media.classList.add('A_title_media')
+  // Блок текста и времени
+  const c_tag_title_time = document.createElement('div');
+  c_tag_title_time.classList.add('C_tag_title_time');
 
-  tag_media.innerHTML = tags
-  note_cover.innerHTML = note
-  time_read.innerHTML = time
-  title_media.innerHTML = title
+  const a_tag_time = document.createElement('div');
+  a_tag_time.classList.add('A_tag_time');
 
-  cover_media.style.backgroundImage = `url(${cover})`
+  const q_tag_media = document.createElement('p');
+  q_tag_media.classList.add('Q_tag_media');
+  q_tag_media.textContent = tagsString ? tagsString.charAt(0).toUpperCase() + tagsString.slice(1) : '';
 
-  const card = document.createElement('div')
-  card.classList.add('M_Card')
-  card.appendChild(cover_media)
-  card.appendChild(tag_media)
-  card.appendChild(note_cover)
-  card.appendChild(time_read)
-  card.appendChild(title_media)
+  const q_time_read = document.createElement('p');
+  q_time_read.classList.add('Q_time_read');
+  q_time_read.textContent = time; 
 
-  document.querySelector('.C_media_cards').appendChild(card)
+  const q_title_media = document.createElement('h5');
+  q_title_media.classList.add('Q_title_media');
+  q_title_media.textContent = title;
+
+  a_tag_time.appendChild(q_tag_media);
+  a_tag_time.appendChild(q_time_read);
+  c_tag_title_time.appendChild(a_tag_time);
+  c_tag_title_time.appendChild(q_title_media);
+
+  // Блок обложки и кнопки-стрелки
+  const a_img_button_cataloge = document.createElement('div');
+  a_img_button_cataloge.classList.add('A_img_button_cataloge');
+
+  const q_cover_media = document.createElement('div');
+  q_cover_media.classList.add('Q_cover_media');
+  
+  // Валидация ссылки на картинку (защита от краша 404)
+  if (cover && typeof cover === 'string' && cover.trim() !== '' && cover !== 'undefined') {
+    q_cover_media.style.backgroundImage = `url('${cover}')`;
+  } else {
+    q_cover_media.style.backgroundColor = '#e0e0e0'; 
+  }
+
+  const a_button_arrow_media = document.createElement('div');
+  a_button_arrow_media.classList.add('A_button_arrow_media');
+  
+  // Инъекция SVG через переменную сборщика Webpack
+  a_button_arrow_media.innerHTML = `
+    <div class="A_button_arrow">
+      <img class="Q_arrow_button" src="${arrowSvg}" alt="Стрелка">
+    </div>
+  `;
+
+  a_img_button_cataloge.appendChild(q_cover_media);
+  a_img_button_cataloge.appendChild(a_button_arrow_media);
+
+  // Сборка карточки воедино
+  card.appendChild(c_tag_title_time);
+  card.appendChild(a_img_button_cataloge);
+
+  // Отключаем реакцию мыши у всех детей карточки, чтобы курсор-палец не дёргался
+  const allChildren = card.querySelectorAll('*');
+  allChildren.forEach(child => {
+    child.style.setProperty('pointer-events', 'none', 'important');
+  });
+
+  const container = document.querySelector('.C_media_cards');
+  if (container) {
+    container.appendChild(card);
+  }
 }
 
-let content
+/**
+ * Логика переключения фильтров (тегов)
+ */
+
+function setupFilters() {
+  const tags = document.querySelectorAll('.C_tag_all_media .A_tag_media');
+
+  tags.forEach(tagElement => {
+    tagElement.addEventListener('click', () => {
+      const activeTag = document.querySelector('.C_tag_all_media .A_tag_media.active');
+      if (activeTag) {
+        activeTag.classList.remove('active');
+      }
+      tagElement.classList.add('active');
+
+      const selectedTag = tagElement.getAttribute('data-tag').toLowerCase();
+
+      if (selectedTag === 'все') {
+        filteredContent = [...content];
+      } else {
+        filteredContent = content.filter(item => {
+          // ИСПРАВЛЕНИЕ: Безопасное извлечение тегов с защитой от undefined и null
+          const itemTags = item.tags ? (Array.isArray(item.tags) ? item.tags.join(', ') : item.tags).toLowerCase() : '';
+          return itemTags.includes(selectedTag);
+        });
+      }
+
+      // Сбрасываем счетчик страниц и чистим контейнер карточек
+      currentIndex = 0;
+      const container = document.querySelector('.C_media_cards');
+      if (container) container.innerHTML = '';
+      
+      // ИСПРАВЛЕНИЕ: Перед рендером проверяем, чтобы у каждой отфильтрованной карточки были валидные поля
+      filteredContent.forEach(item => {
+        if (!item.cover || typeof item.cover !== 'string' || item.cover.trim() === '') {
+          item.cover = ''; // Гарантируем, что пустая обложка не превратится в строку 'undefined' или '-'
+        }
+        if (!item.butt || typeof item.butt !== 'string' || item.butt.trim() === '') {
+          item.butt = '#'; // Даем безопасную заглушку вместо пустого запроса
+        }
+      });
+
+      // Перерисовываем карточки
+      renderCards();
+    });
+  });
+}
+
+
+
+
+
+
+/**
+ * Точка входа приложения
+ */
 document.addEventListener('DOMContentLoaded', () => {
-  getArticleContent().then((data) => {
-    content = data
-    initArticleContent()
-  })
-})
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  if (loadMoreBtn) {
+    loadMoreBtn.style.setProperty('cursor', 'pointer', 'important');
+    loadMoreBtn.addEventListener('click', renderCards);
+  }
 
-// import Airtable from 'airtable'
-
-// const token =
-//   'patMqZk2Akn5UHWfm.48f5f0966f6908ad92e8c86f092d706c79770163860173f2ebc99e60bc7aa57b'
-
-// Airtable.configure({
-//   endpointUrl: 'https://api.airtable.com',
-//   apiKey: token
-// })
-// var base = Airtable.base('appwl7ytcI8w3EdWC')
-
-// function getArticleContent() {
-//   return new Promise((resolve, reject) => {
-//     const content = []
-
-//     base('Table 2')
-//       .select({ maxRecords: 100 })
-//       .firstPage()
-//       .then((result) => {
-//         result.forEach((record) => {
-//           content.push({
-//             id: record.id,
-//             title: record.fields['NameMedia'],
-//             tags: record.fields['TagsMedia'],
-//             time: record.fields['TimeMedia'],
-//             note: record.fields['NoteMedia'],
-//             cover: record.fields['CoverMedia'],
-
-//           })
-//         })
-
-//         resolve(content)
-//       })
-
-//   })
-// }
-
-// function initArticleContent() {
-//   const href = window.location.href.split('/').pop().split('.')[0]
-
-//   content.forEach((stroke) => {
-//     createArticleContent(stroke)
-//     if (stroke.page === href) {
-//       createArticleContent(stroke)
-//     }
-//   })
-// }
-
-//  console.log(
-//     'da'
-//   )
-
-// function createArticleContent(stroke) {
-//   let { title, tags, time, note, cover } = stroke
-
- 
-
-//   const cover_media = document.querySelector('.Q_cover_media')
-//   const tag_media = document.querySelector('.Q_tag_media')
-//   const note_cover = document.querySelector('.Q_note_cover')
-//   const time_read = document.querySelector('.Q_time_read')
-//   const title_media = document.querySelector('.Q_title_media')
+  getArticleContent()
+    .then((data) => {
+      content = data;
+      initArticleContent();
+    })
+    .catch((error) => {
+      console.error("Ошибка при получении данных из Airtable:", error);
+    });
+});
 
 
-//   tag_media.innerHTML = tags
-//   note_cover.innerHTML = note
-//   time_read.innerHTML = time
-//   title_media.innerHTML = title
-
-
-//   cover_media.style.backgroundImage = `url(${cover})`
-
-// }
-
-// let content
-// document.addEventListener('DOMContentLoaded', () => {
-//   getArticleContent().then((data) => {
-//     content = data
-//     initArticleContent()
-//   })
-// })

@@ -1,5 +1,42 @@
-.С_footer{
+.C_footer{
     display: flex;
     flex-direction: row;
-    gap: 64px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-blue);
+    padding-top: 80px;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    margin-top: 160px;
+    color: var(--white-card);
+}
+
+.O_f_all_text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 88vw;
+}
+
+.M_footer_block{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.A_f_bl_rext{
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+
+.C_clmn_f{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }

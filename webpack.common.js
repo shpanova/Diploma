@@ -82,10 +82,10 @@ module.exports = {
         }
       },
       {
-        test: /\.(woff|woff2|ttf|otf|)$/i,
-        loader: 'file-loader',
-        options: {
-          name: 'fonts/[name].[ext]'
+        test: /\.(woff|woff2|ttf|otf)$/i, // 🟢 Проверьте, чтобы тут не было лишних палочек "|" перед скобкой!
+  type: 'asset/resource',
+  generator: {
+    filename: 'fonts/[name].[ext]'
         }
       }
     ]
