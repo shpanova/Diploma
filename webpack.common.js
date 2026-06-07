@@ -103,45 +103,124 @@ module.exports = {
       chunks: ['index']
     }),
 
+    // Справочник
+    new HtmlWebpackPlugin({
+      template: './src/directory.html',
+      filename: './directory.html',
+      chunks: ['index']
+    }),
+
     // Section стили фрейм ап
     new HtmlWebpackPlugin({
       template: './src/frameup.html',
       filename: './frameup.html',
-      chunks: ['index']
+      chunks: ['article']
+    }),
+
+    // Section стили вог
+    new HtmlWebpackPlugin({
+      template: './src/vogue.html',
+      filename: './vogue.html',
+      chunks: ['article']
+    }),
+
+    // Section стили фристайл
+    new HtmlWebpackPlugin({
+      template: './src/freestyle.html',
+      filename: './freestyle.html',
+      chunks: ['article']
     }),
 
     // Section стили афро
     new HtmlWebpackPlugin({
       template: './src/afro.html',
       filename: './afro.html',
-      chunks: ['index']
+      chunks: ['article']
     }),
 
     // Section стили кизомба
     new HtmlWebpackPlugin({
       template: './src/kizomba.html',
       filename: './kizomba.html',
-      chunks: ['index']
+      chunks: ['article']
     }),
 
-    // Section стили кизомба
+    // Section стили бачата пара
     new HtmlWebpackPlugin({
       template: './src/bachata.html',
       filename: './bachata.html',
-      chunks: ['index']
+      chunks: ['article']
     }),
 
-     // Section стили кизомба
+    // Section стили латина
+    new HtmlWebpackPlugin({
+      template: './src/latina.html',
+      filename: './latina.html',
+      chunks: ['article']
+    }),
+
+    // Section стили хип-хоп
+    new HtmlWebpackPlugin({
+      template: './src/hiphop.html',
+      filename: './hiphop.html',
+      chunks: ['article']
+    }),
+
+    // Section стили контемп
+    new HtmlWebpackPlugin({
+      template: './src/contemporary.html',
+      filename: './contemporary.html',
+      chunks: ['article']
+    }),
+
+    // Section стили реггетон
+    new HtmlWebpackPlugin({
+      template: './src/reggaeton.html',
+      filename: './reggaeton.html',
+      chunks: ['article']
+    }),
+
+    // Section стили джаз фанк
+    new HtmlWebpackPlugin({
+      template: './src/jazzfunk.html',
+      filename: './jazzfunk.html',
+      chunks: ['article']
+    }),
+
+    // Section стили реггетон
+    new HtmlWebpackPlugin({
+      template: './src/highheels.html',
+      filename: './highheels.html',
+      chunks: ['article']
+    }),
+
+    // Section стили реггетон
+    new HtmlWebpackPlugin({
+      template: './src/bachatasolo.html',
+      filename: './bachatasolo.html',
+      chunks: ['article']
+    }),
+
+    // Section стили реггетон
+    new HtmlWebpackPlugin({
+      template: './src/dancehall.html',
+      filename: './dancehall.html',
+      chunks: ['article']
+    }),
+
+
+
+
+    
+    
+
+
+     // Section желания
     new HtmlWebpackPlugin({
       template: './src/desire.html',
       filename: './desire.html',
       chunks: ['index']
     }),
-
-    
-
-    
-
 
     // Section музыка
     new HtmlWebpackPlugin({

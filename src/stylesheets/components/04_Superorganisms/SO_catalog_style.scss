@@ -1,6 +1,7 @@
 .SO_catalog_style{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 2vw;
+    gap: 2vw 1.5vw;
 }
