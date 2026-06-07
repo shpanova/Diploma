@@ -1,119 +1,97 @@
-.Q_tag_white, .Q_title_cover_article, .Q_des, .Q_time_read, .Q_note_cover{
+// Обложка
+
+.M_cover_art_title{
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    padding: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+
+    h2{
+        color: var(--white-card);
+    }
+}
+
+.C_tag_art_cover{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+
+.Q_tag_media_op{
+    padding: 8px 16px;
+    background-color: color-mix(in srgb, var(--white-card) 23%, transparent);
+    border-radius: 4px;
     color: var(--white-card);
 }
 
-.Q_title_cover_article {
-    width: 40vw;
-}
-
-.A_title_des_article_cover {
+.A_title_cover_media{
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.A_date_time_article{
+
+// Контент
+
+.C_content_article{
+    margin-top: 100px;
+    margin-bottom: 160px;
+    width: 44vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: end;
+    justify-content: right;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 120px;
+
+    .A_title_icon{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
-.C_text_tag_article{
+
+.A_title_text_art{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 64px;
 }
 
-.cover_img{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 32px;
-    height: 22vw;
-    border-radius: 8px;
-    margin-top: 32px;
-}
-
-.M_article_content{
-    width: 38vw;
+.C_par_text{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 64px;
+    gap: 48px;
 }
 
-.O_article_content{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 64px;
-}
-
-.Q_photo_article{
-    width: 38vw;
-    height: 16vw;
-    border-radius: 8px;
-    margin-top: 48px;
-}
-
-.A_photo_des{
+.Q_text_art_two{
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.C_title_icon{
+.С_img_link{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 24px;
+    align-items: start;
+    gap: 32px;
 }
 
-.Q_text_content{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 40px;
-    color: var(--dark-blue);
-}
-
-.Q_photo_des_art{
-    color: var(--grey-text);
-}
-
-.A_about_nomi{
-    width: 38vw;
-}
-
-.A_row_nomi{
+.С_img_link_two{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    .Q_nomi{
+    .С_img_link{
         display: flex;
         flex-direction: column;
-        width: 16vw;
         gap: 24px;
-        color: var(--dark-blue);
-
-        h5{
-            font-weight: 600;
-        }
     }
-}
-
-.M_cataloge_nomination{
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    margin-top: 40px;
 }
 
 

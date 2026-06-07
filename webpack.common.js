@@ -9,8 +9,8 @@ const path = require('path')
 module.exports = {
   entry: {
     index: './src/index.js',
-    articles: './src/articleContent.js',
-    media: './src/media.js'
+    media: './src/media.js',
+    article: './src/article-page.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -82,7 +82,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(woff|woff2|ttf|otf)$/i, // 🟢 Проверьте, чтобы тут не было лишних палочек "|" перед скобкой!
+        test: /\.(woff|woff2|ttf|otf)$/i, 
   type: 'asset/resource',
   generator: {
     filename: 'fonts/[name].[ext]'
@@ -169,10 +169,17 @@ module.exports = {
 
     // Section статьи
     new HtmlWebpackPlugin({
-      template: './src/Articles/RosesStage.html',
-      filename: './Articles/RosesStage.html',
-      chunks: ['articles']
+      template: './src/Articles/FrameUPStrip.html',
+      filename: './Articles/FrameUPStrip.html',
+      chunks: ['article']
     }),
+
+     new HtmlWebpackPlugin({
+      template: './src/Articles/BachataKizomba.html',
+      filename: './Articles/BachataKizomba.html',
+      chunks: ['article']
+    }),
+    
 
 
     // Partials
