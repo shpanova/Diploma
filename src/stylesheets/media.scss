@@ -228,6 +228,54 @@
 }
 
 
+// Помощник
+
+.O_helper_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 88vw;
+    height: 32vw;
+    background-image: var(--blue-gradient);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.A_button{
+    background-color: var(--orange-accent);
+    border-radius: 100px;
+    height: 56px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: var(--white-card);
+    border: none;
+}
+
+.M_title_helper{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.Q_img_help_mus, .Q_img_help_des{
+    width: 20vw;
+}
+
+.Q_img_help_mus{
+    position: absolute;
+    left: -1.5vw;
+    bottom: -1vw;  
+}
+
+.Q_img_help_des{
+    position: absolute;
+    right: -4vw;
+    top: -1.5vw;
+}
+
 
 
 
