@@ -27,12 +27,8 @@
 
 /* СТИЛИ ДЛЯ ССЫЛОК В МЕНЮ */
 .C_menu a {
-    font-family: 'Golos Text VF', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    text-decoration: none; 
     color: var(--black-text); 
-    padding-bottom: 6px; 
+    padding-bottom: 4px; 
     border-bottom: 3px solid transparent; 
     transition: color 0.2s ease; 
 }
@@ -45,6 +41,8 @@
 .C_menu a.active {
     color: var(--black-text); 
     border-bottom-color: var(--orange-accent); 
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600; 
 }
 
 

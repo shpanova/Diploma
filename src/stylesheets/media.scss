@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     gap: 80px;
-    margin-top: 120px;
 }
 
 
@@ -12,7 +11,6 @@
     border-radius: 10px;
     padding: 0px 40px 64px 40px;
     margin-top: 64px;
-    margin-bottom: 120px;
 }
 
 .C_first_media_art{
@@ -40,7 +38,7 @@
     gap: 64px;
     background-color: var(--white-body);
     border-radius: 0 0 8px 8px;
-    padding: 56px 32px 32px 32px;
+    padding: 40px 32px 32px 32px;
     width: 34vw;
     height: 28vw;
 }
@@ -52,7 +50,7 @@
     gap: 64px;
     background-color: var(--white-body);
     border-radius: 0 0 8px 8px;
-    padding: 56px 32px 32px 32px;
+    padding: 40px 32px 32px 32px;
     width: 28vw;
     height: 28vw;
 }
@@ -99,7 +97,6 @@
     display: flex;
     flex-direction: column;
     gap: 80px;
-    margin-bottom: 120px;
 }
 
 // ____карточки медиа_______
@@ -231,13 +228,7 @@
 }
 
 
-// Рекомендуемые статьи
 
-.C_also_card{
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-}
 
 
 // <div class="M_card_cataloge_media">

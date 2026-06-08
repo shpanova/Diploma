@@ -36,6 +36,13 @@
     color: var(--white-card);
 }
 
+.Q_tag_media_op_white{
+    padding: 8px 16px;
+    background-color: color-mix(in srgb, var(--light-grey) 30%, transparent);
+    border-radius: 4px;
+    color: var(--grey-text);
+}
+
 .A_title_cover_media{
     display: flex;
     flex-direction: column;
@@ -101,4 +108,18 @@
     }
 }
 
+
+// Рекомендуемые статьи
+
+.C_also_card{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.C_padding_also, .C_padding_block{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
 
