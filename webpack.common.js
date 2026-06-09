@@ -246,6 +246,27 @@ module.exports = {
       chunks: ['media']
     }),
 
+    // Section подборки медиа
+    new HtmlWebpackPlugin({
+      template: './src/Articles/Impro_selection.html',
+      filename: './Articles/Impro_selection.html',
+      chunks: ['article']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/Articles/MK_selection.html',
+      filename: './Articles/MK_selection.html',
+      chunks: ['article']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/Articles/Cinema_selection.html',
+      filename: './Articles/Cinema_selection.html',
+      chunks: ['article']
+    }),
+
+    
+
     // Section статьи
     new HtmlWebpackPlugin({
       template: './src/Articles/FrameUPStrip.html',
