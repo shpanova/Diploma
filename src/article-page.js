@@ -20,7 +20,6 @@ let filteredContent = [];
 let currentIndex = 0; 
 const cardsPerPage = 3; 
 
-
 function getArticleContent() {
   return new Promise((resolve, reject) => {
     const contentData = [];
@@ -34,8 +33,8 @@ function getArticleContent() {
           let coverUrl = '';
 
           if (coverField) {
-            if (Array.isArray(coverField) && coverField[0] && coverField[0].url) {
-              coverUrl = coverField[0].url;
+            if (Array.isArray(coverField) && coverField && coverField.url) {
+              coverUrl = coverField.url;
             } else if (typeof coverField === 'string') {
               coverUrl = coverField;
             }
@@ -61,17 +60,37 @@ function getArticleContent() {
 }
 
 function renderCards() {
-  const nextCards = filteredContent.slice(currentIndex, currentIndex + cardsPerPage);
-  
-  nextCards.forEach((stroke) => {
-    createArticleContent(stroke);
-  });
+  const container = document.querySelector('.C_media_cards');
+  if (!container) return;
 
-  currentIndex += cardsPerPage;
+  const indicesAttr = container.getAttribute('data-show-indices');
 
-  const loadMoreBtn = document.getElementById('load-more-btn');
-  if (loadMoreBtn) {
-    loadMoreBtn.style.display = currentIndex >= filteredContent.length ? 'none' : 'inline-block';
+  if (indicesAttr) {
+    const targetIndices = indicesAttr.split(',').map(num => parseInt(num.trim(), 10));
+    
+    targetIndices.forEach((index) => {
+      if (index >= 0 && index < filteredContent.length) {
+        createArticleContent(filteredContent[index]);
+      }
+    });
+
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    if (loadMoreBtn) {
+      loadMoreBtn.style.display = 'none';
+    }
+  } else {
+    const nextCards = filteredContent.slice(currentIndex, currentIndex + cardsPerPage);
+    
+    nextCards.forEach((stroke) => {
+      createArticleContent(stroke);
+    });
+
+    currentIndex += cardsPerPage;
+
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    if (loadMoreBtn) {
+      loadMoreBtn.style.display = currentIndex >= filteredContent.length ? 'none' : 'inline-block';
+    }
   }
 }
 
@@ -87,6 +106,7 @@ function initArticleContent() {
 }
 
 function createArticleContent(stroke) {
+  if (!stroke) return;
   const { title, tags, time, cover, butt } = stroke;
 
   const card = document.createElement('a');
