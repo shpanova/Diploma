@@ -8,7 +8,7 @@ body, html{
     margin: 0 auto;
     height: 100%;
     font-family: 'Golos Text VF', sans-serif;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
 
@@ -132,6 +132,7 @@ a{
     font-size: 18px;
     line-height: 1.1;
     color: var(--black-text);
+    cursor: pointer;
 }
 
 a span{
@@ -139,6 +140,7 @@ a span{
     font-weight: 500; 
     font-size: 18px;
     line-height: 1.1;
+    cursor: pointer;
 }
 
 .n, .o, .k{

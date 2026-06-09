@@ -49,7 +49,7 @@ function getArticleContent() {
             time: record.fields['TimeMedia'] || '',
             note: record.fields['NoteMedia'] || '',
             cover: coverUrl, 
-            butt: record.fields['ButtMedia'] || '' 
+            cataloge: record.fields['CatalogeMedia'] || '' 
           });
         });
 
@@ -88,15 +88,15 @@ function initArticleContent() {
 }
 
 function createArticleContent(stroke) {
-  const { title, tags, time, cover, butt } = stroke;
+  const { title, tags, time, cover, cataloge } = stroke;
 
   const card = document.createElement('a');
   card.classList.add('M_card_cataloge_media');
   
   card.style.setProperty('cursor', 'pointer', 'important');
   
-  if (butt && typeof butt === 'string' && butt.trim() !== '') {
-    card.setAttribute('href', butt);
+  if (cataloge && typeof cataloge === 'string' && cataloge.trim() !== '') {
+    card.setAttribute('href', cataloge);
   } else {
     card.setAttribute('href', '#');
   }
@@ -195,8 +195,8 @@ function setupFilters() {
         if (!item.cover || typeof item.cover !== 'string' || item.cover.trim() === '') {
           item.cover = ''; 
         }
-        if (!item.butt || typeof item.butt !== 'string' || item.butt.trim() === '') {
-          item.butt = '#'; 
+        if (!item.cataloge || typeof item.cataloge !== 'string' || item.cataloge.trim() === '') {
+          item.cataloge = '#'; 
         }
       });
 

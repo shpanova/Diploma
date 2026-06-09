@@ -253,12 +253,145 @@ module.exports = {
       chunks: ['article']
     }),
 
-     new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: './src/Articles/BachataKizomba.html',
       filename: './Articles/BachataKizomba.html',
       chunks: ['article']
     }),
     
+    new HtmlWebpackPlugin({
+      template: './src/Articles/DelTvorch.html',
+      filename: './Articles/DelTvorch.html',
+      chunks: ['article']
+    }), 
+
+    new HtmlWebpackPlugin({
+      template: './src/Articles/HipHopFreestyle.html',
+      filename: './Articles/HipHopFreestyle.html',
+      chunks: ['article']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/Articles/ImproPotok.html',
+      filename: './Articles/ImproPotok.html',
+      chunks: ['article']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/Articles/StMK.html',
+      filename: './Articles/StMK.html',
+      chunks: ['article']
+    }),
+
+   
+    new HtmlWebpackPlugin({
+      template: './src/Articles/Nemoe.html',
+      filename: './Articles/Nemoe.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/PravilaT.html',
+      filename: './Articles/PravilaT.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/RaznoeT.html',
+      filename: './Articles/RaznoeT.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/OstDr.html',
+      filename: './Articles/OstDr.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/OniPodumaut.html',
+      filename: './Articles/OniPodumaut.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/BoimsaT.html',
+      filename: './Articles/BoimsaT.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/PolzaMK.html',
+      filename: './Articles/PolzaMK.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/ImpImprovise.html',
+      filename: './Articles/ImpImprovise.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/TaskCool.html',
+      filename: './Articles/TaskCool.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/ShortsDance.html',
+      filename: './Articles/ShortsDance.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/HairT.html',
+      filename: './Articles/HairT.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/IzolT.html',
+      filename: './Articles/IzolT.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/TochkiDv.html',
+      filename: './Articles/TochkiDv.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/Kablyki.html',
+      filename: './Articles/Kablyki.html',
+      chunks: ['article']
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      template: './src/Articles/StripShoes.html',
+      filename: './Articles/StripShoes.html',
+      chunks: ['article']
+    }),
+
+    
+
+
+
 
 
     // Partials

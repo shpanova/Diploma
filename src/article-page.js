@@ -34,21 +34,10 @@ function getArticleContent() {
           let coverUrl = '';
 
           if (coverField) {
-            if (Array.isArray(coverField) && coverField && coverField.url) {
-              coverUrl = coverField.url;
+            if (Array.isArray(coverField) && coverField[0] && coverField[0].url) {
+              coverUrl = coverField[0].url;
             } else if (typeof coverField === 'string') {
               coverUrl = coverField;
-            }
-          }
-
-          const imageCoverField = record.fields['ImageCover'];
-          let imageCoverUrl = '';
-
-          if (imageCoverField) {
-            if (Array.isArray(imageCoverField) && imageCoverField && imageCoverField.url) {
-              imageCoverUrl = imageCoverField.url;
-            } else if (typeof imageCoverField === 'string') {
-              imageCoverUrl = imageCoverField;
             }
           }
 
@@ -59,7 +48,6 @@ function getArticleContent() {
             time: record.fields['TimeMedia'] || '',
             note: record.fields['NoteMedia'] || '',
             cover: coverUrl, 
-            imageCover: imageCoverUrl,
             butt: record.fields['ButtMedia'] || '' 
           });
         });
@@ -73,37 +61,17 @@ function getArticleContent() {
 }
 
 function renderCards() {
-  const container = document.querySelector('.C_media_cards');
-  if (!container) return;
+  const nextCards = filteredContent.slice(currentIndex, currentIndex + cardsPerPage);
+  
+  nextCards.forEach((stroke) => {
+    createArticleContent(stroke);
+  });
 
-  const indicesAttr = container.getAttribute('data-show-indices');
+  currentIndex += cardsPerPage;
 
-  if (indicesAttr) {
-    const targetIndices = indicesAttr.split(',').map(num => parseInt(num.trim(), 10));
-    
-    targetIndices.forEach((index) => {
-      if (index >= 0 && index < filteredContent.length) {
-        createArticleContent(filteredContent[index]);
-      }
-    });
-
-    const loadMoreBtn = document.getElementById('load-more-btn');
-    if (loadMoreBtn) {
-      loadMoreBtn.style.display = 'none';
-    }
-  } else {
-    const nextCards = filteredContent.slice(currentIndex, currentIndex + cardsPerPage);
-    
-    nextCards.forEach((stroke) => {
-      createArticleContent(stroke);
-    });
-
-    currentIndex += cardsPerPage;
-
-    const loadMoreBtn = document.getElementById('load-more-btn');
-    if (loadMoreBtn) {
-      loadMoreBtn.style.display = currentIndex >= filteredContent.length ? 'none' : 'inline-block';
-    }
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  if (loadMoreBtn) {
+    loadMoreBtn.style.display = currentIndex >= filteredContent.length ? 'none' : 'inline-block';
   }
 }
 
@@ -119,11 +87,11 @@ function initArticleContent() {
 }
 
 function createArticleContent(stroke) {
-  if (!stroke) return;
-  const { title, tags, time, cover, imageCover, butt } = stroke;
+  const { title, tags, time, cover, butt } = stroke;
 
   const card = document.createElement('a');
   card.classList.add('M_card_cataloge_media');
+  
   card.style.setProperty('cursor', 'pointer', 'important');
   
   if (butt && typeof butt === 'string' && butt.trim() !== '') {
@@ -170,25 +138,16 @@ function createArticleContent(stroke) {
     q_cover_media.style.backgroundColor = '#e0e0e0'; 
   }
 
-  const Q_cover_art_big = document.createElement('div');
-  Q_cover_art_big.classList.add('Q_cover_art_big');
-  if (imageCover && typeof imageCover === 'string' && imageCover.trim() !== '' && imageCover !== 'undefined') {
-    Q_cover_art_big.style.backgroundImage = `url('${imageCover}')`;
-  }
-
   const a_button_arrow_media = document.createElement('div');
   a_button_arrow_media.classList.add('A_button_arrow_media');
   
-  if (typeof arrowSvg !== 'undefined') {
-    a_button_arrow_media.innerHTML = `
-      <div class="A_button_arrow">
-        <img class="Q_arrow_button" src="${arrowSvg}" alt="Стрелка">
-      </div>
-    `;
-  }
+  a_button_arrow_media.innerHTML = `
+    <div class="A_button_arrow">
+      <img class="Q_arrow_button" src="${arrowSvg}" alt="Стрелка">
+    </div>
+  `;
 
   a_img_button_cataloge.appendChild(q_cover_media);
-  a_img_button_cataloge.appendChild(Q_cover_art_big);
   a_img_button_cataloge.appendChild(a_button_arrow_media);
 
   card.appendChild(c_tag_title_time);
