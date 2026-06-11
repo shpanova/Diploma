@@ -11,10 +11,10 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    margin-top: 200px;
-    margin-bottom: 340px;
 
-    h2{
-        text-align: center;
+    .Q_icon_dec{
+        display: flex;
+        margin-top: -200px;
     }
+
 }

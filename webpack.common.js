@@ -183,8 +183,8 @@ module.exports = {
 
     // Section стили джаз фанк
     new HtmlWebpackPlugin({
-      template: './src/jazzfunk.html',
-      filename: './jazzfunk.html',
+      template: './src/jazzfank.html',
+      filename: './jazzfank.html',
       chunks: ['style']
     }),
 
