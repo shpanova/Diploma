@@ -16,7 +16,7 @@ module.exports = {
   output: {
   filename: '[name].[contenthash].js',
   path: path.resolve(__dirname, 'docs'),
-  publicPath: '/Diploma/',   // явный корень — на случай, если 'auto' не сработал
+  publicPath: '/',   // явный корень — на случай, если 'auto' не сработал
   },
   module: {
     rules: [
