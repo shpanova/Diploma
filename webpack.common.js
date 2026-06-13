@@ -100,7 +100,7 @@ module.exports = {
 
     // Index
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/Index.html',
       filename: './index.html',
       chunks: ['index']
     }),
