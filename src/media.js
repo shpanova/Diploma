@@ -1,18 +1,8 @@
 
 import './index.css'
 
-import Airtable from 'airtable';
 import arrowSvg from './images/Arrow_button.svg';
 
-
-const token =
-  'patMqZk2Akn5UHWfm.48f5f0966f6908ad92e8c86f092d706c79770163860173f2ebc99e60bc7aa57b'
-
-Airtable.configure({
-  endpointUrl: 'https://api.airtable.com',
-  apiKey: token
-})
-var base = Airtable.base('appwl7ytcI8w3EdWC')
 
 
 // Глобальное состояние приложения
@@ -22,44 +12,37 @@ let currentIndex = 0;
 const cardsPerPage = 12; 
 
 
+import articles from './data/table-2.json'; // путь — относительно текущего файла
+
 function getArticleContent() {
-  return new Promise((resolve, reject) => {
-    const contentData = [];
-
-    base('Table 2')
-      .select({ maxRecords: 100 })
-      .firstPage()
-      .then((result) => {
-        result.forEach((record) => {
-          const coverField = record.fields['CoverMedia'];
-          let coverUrl = '';
-
-          if (coverField) {
-            if (Array.isArray(coverField) && coverField[0] && coverField[0].url) {
-              coverUrl = coverField[0].url;
-            } else if (typeof coverField === 'string') {
-              coverUrl = coverField;
-            }
+  const contentData = [];
+  articles.forEach((record) => {
+    const coverField = record.fields['CoverMedia'];
+    let coverUrl = '';
+    // Вся твоя текущая логика обработки обложки с исправлением бага:
+        if (coverField) {
+          // Если это массив от Airtable, берем url у ПЕРВОГО элемента массива [0]
+          if (Array.isArray(coverField) && coverField.length > 0) {
+            coverUrl = coverField[0].url || '';
+          } else if (typeof coverField === 'string') {
+            coverUrl = coverField;
           }
+        }
 
-          contentData.push({
-            id: record.id,
-            title: record.fields['NameMedia'] || 'Без названия',
-            tags: record.fields['TagsMedia'] || '',
-            time: record.fields['TimeMedia'] || '',
-            note: record.fields['NoteMedia'] || '',
-            cover: coverUrl, 
-            cataloge: record.fields['CatalogeMedia'] || '' 
-          });
+        // Наполнение массива объектов
+        contentData.push({
+          id: record.id,
+          title: record.fields['NameMedia'] || 'Без названия',
+          tags: record.fields['TagsMedia'] || '',
+          time: record.fields['TimeMedia'] || '',
+          note: record.fields['NoteMedia'] || '',
+          cover: coverUrl, 
+          butt: record.fields['CatalogeMedia'] || '' 
         });
-
-        resolve(contentData);
-      })
-      .catch((err) => {
-        reject(err);
-      });
   });
+  return Promise.resolve(contentData); // .then(...) в местах вызова продолжит работать
 }
+
 
 function renderCards() {
   const nextCards = filteredContent.slice(currentIndex, currentIndex + cardsPerPage);

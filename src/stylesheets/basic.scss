@@ -161,15 +161,9 @@ a span{
 }
 
 #blue_bold{
-    font-family: 'Golos Text VF', sans-serif;
+
     color: var(--blue-note);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
-@media screen and (max-width: 834px){
-    .A_menu{
-        background-color: bisque;
-    }
-
-}

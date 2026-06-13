@@ -57,6 +57,6 @@
 @import './stylesheets/components/04_Superorganisms/SO_desire_video.scss';
 @import './stylesheets/components/04_Superorganisms/SO_catalog_style.scss';
 @import 'stylesheets/media.scss';
-@import 'stylesheets/Adaptive.scss';
+@import 'stylesheets/responsive.scss';
 
 

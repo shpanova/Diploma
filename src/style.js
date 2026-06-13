@@ -1,17 +1,7 @@
 import './index.css'
 
-import Airtable from 'airtable';
 import arrowSvg from './images/Arrow_button.svg';
 
-
-const token =
-  'patMqZk2Akn5UHWfm.48f5f0966f6908ad92e8c86f092d706c79770163860173f2ebc99e60bc7aa57b'
-
-Airtable.configure({
-  endpointUrl: 'https://api.airtable.com',
-  apiKey: token
-})
-var base = Airtable.base('appwl7ytcI8w3EdWC')
 
 
 // Глобальное состояние приложения
@@ -20,44 +10,37 @@ let filteredContent = [];
 let currentIndex = 0; 
 const cardsPerPage = 3; 
 
+import articles from './data/table-2.json'; // путь — относительно текущего файла
+
 function getArticleContent() {
-  return new Promise((resolve, reject) => {
-    const contentData = [];
-
-    base('Table 2')
-      .select({ maxRecords: 100 })
-      .firstPage()
-      .then((result) => {
-        result.forEach((record) => {
-          const coverField = record.fields['CoverMedia'];
-          let coverUrl = '';
-
-          if (coverField) {
-            if (Array.isArray(coverField) && coverField && coverField.url) {
-              coverUrl = coverField.url;
-            } else if (typeof coverField === 'string') {
-              coverUrl = coverField;
-            }
+  const contentData = [];
+  articles.forEach((record) => {
+    const coverField = record.fields['CoverMedia'];
+    let coverUrl = '';
+    // Вся твоя текущая логика обработки обложки с исправлением бага:
+        if (coverField) {
+          // Если это массив от Airtable, берем url у ПЕРВОГО элемента массива [0]
+          if (Array.isArray(coverField) && coverField.length > 0) {
+            coverUrl = coverField[0].url || '';
+          } else if (typeof coverField === 'string') {
+            coverUrl = coverField;
           }
+        }
 
-          contentData.push({
-            id: record.id,
-            title: record.fields['NameMedia'] || 'Без названия',
-            tags: record.fields['TagsMedia'] || '',
-            time: record.fields['TimeMedia'] || '',
-            note: record.fields['NoteMedia'] || '',
-            cover: coverUrl, 
-            butt: record.fields['CatalogeMedia'] || '' 
-          });
+        // Наполнение массива объектов
+        contentData.push({
+          id: record.id,
+          title: record.fields['NameMedia'] || 'Без названия',
+          tags: record.fields['TagsMedia'] || '',
+          time: record.fields['TimeMedia'] || '',
+          note: record.fields['NoteMedia'] || '',
+          cover: coverUrl, 
+          butt: record.fields['CatalogeMedia'] || '' 
         });
-
-        resolve(contentData);
-      })
-      .catch((err) => {
-        reject(err);
-      });
   });
+  return Promise.resolve(contentData); // .then(...) в местах вызова продолжит работать
 }
+
 
 function renderCards() {
   const container = document.querySelector('.C_media_cards');
@@ -225,6 +208,37 @@ function setupFilters() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  const burgerIcon = document.querySelector('.Q_burger_icon');
+  const menuNav = document.querySelector('.M_menu_nav');
+
+  if (burgerIcon && menuNav) {
+    const lines = burgerIcon.querySelectorAll('span');
+
+    burgerIcon.addEventListener('click', () => {
+      burgerIcon.classList.toggle('open');
+      
+      if (burgerIcon.classList.contains('open')) {
+        menuNav.style.setProperty('right', '0', 'important');
+        document.body.style.overflow = 'hidden';
+        
+        if (lines.length === 3) {
+          lines[0].style.setProperty('transform', 'translateY(8.5px) rotate(45deg)', 'important');
+          lines[1].style.setProperty('opacity', '0', 'important');
+          lines[2].style.setProperty('transform', 'translateY(-8.5px) rotate(-45deg)', 'important');
+        }
+      } else {
+        menuNav.style.setProperty('right', '-100%', 'important');
+        document.body.style.overflow = '';
+        
+        if (lines.length === 3) {
+          lines[0].style.setProperty('transform', 'none', 'important');
+          lines[1].style.setProperty('opacity', '1', 'important');
+          lines[2].style.setProperty('transform', 'none', 'important');
+        }
+      }
+    });
+  }
+
   const loadMoreBtn = document.getElementById('load-more-btn');
   if (loadMoreBtn) {
     loadMoreBtn.style.setProperty('cursor', 'pointer', 'important');

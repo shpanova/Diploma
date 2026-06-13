@@ -2,4 +2,11 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    p{
+        max-width: 64%;
+    }
+    h5{
+        max-width: 64%;
+    }
 }

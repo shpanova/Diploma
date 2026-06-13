@@ -1,0 +1,1477 @@
+@media screen and (max-width: 1439px){
+     h1, h1 span{
+        font-size: 48px;
+    }
+
+    h2, h2 span{
+        font-size: 44px;
+    }
+
+    h3, h3 span{
+        font-size: 40px;
+    }
+
+    h4, h4 span{
+        font-size: 28px;
+    }
+
+    h5, h5 span{
+        font-size: 22px;
+    }
+
+    h6, h6 span{
+        font-size: 18px;
+    }
+
+    p, p span{
+        font-size: 16px;
+    }
+
+    .Q_h2_d{
+        margin-top: 120px;
+    }
+
+    .O_card_style{
+        width: 28vw;
+    }
+
+    .SO_catalog_style{
+        gap: 2vw;
+    }
+
+    .A_f_bl_rext{
+        gap: 28px;
+    }
+
+    .A_about_style{
+        h5{
+            max-width: 90%;
+        }
+        p{
+            max-width: 80%;
+        }
+    }
+
+    .M_about_image{
+        width: 36vw;
+    }
+
+    .O_text_video_first{
+        gap: 32px;
+    }
+
+    .Q_image_little{
+        width: 140px;
+    }
+
+    .SO_music_block{
+        padding: 24px;
+    }
+
+    .O_track{
+        padding: 24px;
+        height: 120px;
+    }
+
+    .Q_audio{
+        width: 26vw;
+    }
+
+    .O_card_text{
+        h5{
+            max-width: 62%;
+        }
+    }
+
+    .A_desire{
+        justify-content: space-between;
+    }
+
+    .M_card_cataloge_media{
+        padding: 20px;
+        height: 30vw;
+    }
+
+    .Q_tag_media{
+        padding: 8px 10px;;
+    }
+
+    .C_tag_title_time{
+        gap: 24px;
+    }
+
+    .O_helper_card{
+        height: 42vw;
+    }
+    
+    .Q_img_help_des{
+        right: -6vw;
+    }
+
+    .A_des_card{
+        width: 28vw;
+        padding: 2vw 2vw 3vw 2vw;
+    }
+
+    .C_desire_cataloge{
+        margin-top: 64px;
+    }
+
+    .Q_img_des{
+        width: 24vw;
+    }
+
+    .A_title_cover_media{
+        gap: 20px;
+    }
+
+    .M_card_about_service_big{
+        padding: 24px;
+        gap: 24px;
+        height: 31vw;
+        width: 32vw;
+    }
+
+    .M_card_about_service_little{
+        padding: 24px;
+        gap: 24px;
+        height: 31vw;
+        width: 32vw;
+    }
+
+    .C_card_about_service{
+        gap: 16px;
+    }
+
+    .C_first_media_art{
+        padding: 0px 32px 48px 32px;
+    }
+
+    .M_selection_card{
+        width: 30vw;
+        height: 27vw;
+    }
+
+    .O_selection{
+        width: 88vw;
+    }
+
+    .C_content_article{
+        width: 58vw;
+    }
+}
+
+
+@media screen and (max-width: 1025px){
+
+    body, html{
+    margin: 0 auto;
+    background-color: var(--white-body);
+    width: 100vw;
+    overflow-x: hidden;
+    height: 100%;
+   
+    }
+    h1, h1 span{
+        font-size: 56px;
+    }
+
+    h2, h2 span{
+        font-size: 48px;
+    }
+
+    h3, h3 span{
+        font-size: 40px;
+    }
+
+    h4, h4 span{
+        font-size: 32px;
+    }
+
+    h5, h5 span{
+        font-size: 24px;
+    }
+
+    h6, h6 span{
+        font-size: 20px;
+    }
+
+    p, p span{
+        font-size: 16px;
+    }
+
+    .Q_h2_d{
+        margin-top: 140px;
+    }
+
+    .Q_line{
+        width: 4px;
+    }
+
+    .A_menu{
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    // Справочник
+
+    // стр стилей
+    .A_back_arrow{
+        margin-left: 3vw;
+    }
+
+    .W_1_block_style, .M_title_style_icon{
+        width: 100%;
+    }
+
+    .W_title_block {
+        gap: 80px;
+    }
+
+    .C_content_style {
+        width: 94vw;
+        margin: 0 auto;
+        gap: 110px;
+        margin-bottom: 120px;
+        overflow: hidden
+    }
+
+    .O_text_video_first{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 24px;
+
+    }
+
+    .M_criteria_author{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        width: 100%;
+
+        .A_author_video{
+            width: 170px;
+        }
+    }
+
+    .Q_video{
+        height: 64vw;
+    }
+
+    .A_Image_description{
+        gap: 44px;
+
+        .Q_image_little{
+            width: 152px;
+        }
+    }
+
+    .M_about_image{
+        height: auto;
+    }
+
+    // Музыка
+    .C_two_track{
+        flex-direction: column;
+    }
+
+    .O_track{
+        width: 82vw;
+    }
+
+    .Q_audio{
+        width: 64vw;  
+    }
+
+    .C_name_play{
+        height: 80px;
+    }
+
+    .M_image_name_text{
+        gap: 2vw;
+    }
+
+    // Желания
+    .SO_desire_video{
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: start;
+        gap: 64px;
+        margin-top: 0px;
+    }
+
+    .O_desire_all{
+        width: 100%;
+        gap: 20vw;
+    }
+
+    .Q_video_little{
+        height: 30vw;
+    }
+
+    // Одежда
+
+    .A_text_cloth{
+        h5{
+            max-width: 52vw;
+        }
+    }
+
+    .Q_Image_cloth{
+        width: 180px;
+    }
+
+    .A_card_cloth{
+        gap: 12px;
+    }
+
+    
+    // За кем следить
+    .M_name{
+        gap: 6vw 4vw;
+    }
+
+    .A_desire{
+        width: 28vw;
+        height: 86px;
+        justify-content: space-between;
+    }
+
+    // Читайте также
+    .C_also_card{
+        width: 94vw;
+        margin: 0 auto;
+        gap: 80px;
+    }
+
+
+    // Карточки стилей
+    .O_card_style{
+        width: 46vw;
+        padding: 40px 32px 40px 32px;
+    }
+
+    .SO_catalog_style{
+        gap: 2vw;
+        width: 94vw;
+
+    }
+
+    .C_block_margin{
+        margin-left: 3vw;
+        width: 94vw;
+    }
+
+    .C_padding_also, .C_padding_block{
+        width: 94vw;
+        margin: 0 auto;
+        gap: 110px;
+    }
+
+    // Карточки медиа
+    .M_card_cataloge_media{
+        width: 46vw;
+        height: 44vw; 
+    }
+
+
+    .Q_cover_media{
+        width: 24vw;
+        height: 12vw;
+    }
+
+    // Помощник карточка
+    .O_helper_card{
+        width: 94vw;
+        height: 80vw;
+    }
+
+    .Q_img_help_mus, .Q_img_help_des{
+        width: 30vw;
+    }
+
+    .Q_img_help_des{
+        top: -5vw;
+        right: -8vw;
+    }
+
+    // Выбор желания
+    // карточки желаний
+    .A_des_card{
+        width: 46vw;
+        gap: 24px;
+        padding-bottom: 5vw;
+    }
+
+    .C_desire_cataloge{
+        width: 94vw;
+        margin-left: 3vw;
+        gap: 3vw 2vw;
+    }
+
+    .Q_img_des{
+        width: 42vw;
+    }
+
+    .C_title_desire{
+        margin-top: 0;
+    }
+
+    // Медиа
+    .C_card_about_service{
+        flex-direction: column;
+    }
+
+    .M_card_about_service_big{
+        width: 78vw;
+        border-radius: 8px 0px 0px 8px;
+        height: 46vw;
+        gap: 0;
+        padding: 24px 24px 24px 24px;
+        
+        
+        h4{
+            max-width: 60vw;
+        }
+    }
+
+    .M_card_about_service_little{
+        width: 64vw;
+        border-radius: 8px 0px 0px 8px;
+        padding: 24px 24px 24px 24px;
+        height: 46vw;
+        gap: 0;
+    }
+
+    .C_first_media_art{
+        padding: 80px 0px 80px 16vw;
+        flex-direction: column;
+        align-items: start;
+        justify-content:flex-end;
+        gap: 40px;
+    }
+
+    .C_card_about_service{
+        align-items: end;
+        gap: 32px;
+        width: 78vw;
+    }
+
+    .Q_cover_media{
+        width: 30vw;
+        height: 16vw;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-size: cover;
+    }
+
+    .A_title_icon_h2{
+        margin-top: 140px;
+        width: 94vw;
+        margin-left: 3vw;
+    }
+
+    // Подборки медиа
+    .M_selection_card{
+        height: 34vw;
+        width: 30vw;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-size: cover;
+    }
+
+    .O_selection{
+        width: 94vw;
+    }
+
+    .M_cover_art_title_selection{
+        width: 94vw;
+        margin-left: 3vw;
+        margin-bottom: 64px;
+    }
+
+    .C_media_cards{
+        width: 94vw;
+    }
+
+    .C_media_card_selection{
+        margin-left: 3vw;
+    }
+
+
+    // Статьи медиа
+    .M_cover_art_title{
+        width: 94vw;
+        margin-left: 3vw;
+    }
+
+    .C_content_article{
+       width: 94vw; 
+       gap: 110px;
+    }
+
+    // Футер
+    .C_footer{
+        position: relative;        
+        margin-top: 160px;
+        width: 100vw;
+        left: 0;
+    }
+
+    .O_f_all_text{
+        gap: 8vw;
+        flex-wrap: wrap;
+    }
+
+    .Q_icon_dec{
+        display: none;
+    }
+
+    .C_media_cards{
+        margin: 0 auto;
+    }
+
+}
+
+// 320-834
+@media screen and (max-width: 685px){
+    body, html{
+    margin: 0 auto;
+    background-color: var(--white-body);
+    width: 100vw;
+    overflow-x: hidden;
+    height: 100%;
+   
+    }
+    h1, h1 span{
+        font-size: 36px;
+    }
+
+    h2, h2 span{
+        font-size: 32px;
+    }
+
+    h3, h3 span{
+        font-size: 30px;
+    }
+
+    h4, h4 span{
+        font-size: 26px;
+    }
+
+    h5, h5 span{
+        font-size: 22px;
+    }
+
+    h6, h6 span{
+        font-size: 20px;
+    }
+
+    p, p span{
+        font-size: 18px;
+    }
+
+
+
+    .Q_h2_d{
+        margin-top: 140px;
+    }
+
+    .A_back_arrow{
+        margin-left: 6vw;
+        margin-top: 88px;
+        margin-bottom: 40px;
+    }
+
+    .Q_line{
+        width: 4px;
+    }
+
+    .A_menu{
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    .A_title_icon{
+        align-items: end;
+    }
+
+    // Справочник
+    .O_card_style{
+        width: 88vw;
+        padding: 32px 24px 32px 24px;
+    }
+
+    .SO_catalog_style{
+        width: 88vw;
+        margin: 0 auto;
+        gap: 6vw;
+    }
+
+    .Q_h2_d{
+        margin-top: 120px;
+    }
+
+    .C_block_margin{
+        margin-top: 64px;
+    }
+
+    // Каталог желаний
+    .C_title_desire{
+        width: 88vw;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .C_desire_cataloge{
+        width: 88vw;
+        align-items: center;
+        margin: 0 auto;
+        gap: 8vw;
+        margin-top: 48px;
+    }
+
+    .A_des_card{
+        width: 88vw;
+        padding-top: 5vw;
+        padding-bottom: 10vw;
+    }
+
+    .Q_img_des{
+        width: 78vw;
+    }
+
+    // Страницы стилей
+
+    .C_content_style{
+        width: 88vw;
+        margin: 0 auto;
+        gap: 80px;
+        height: auto;
+    }
+
+    .W_1_block_style{
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .A_about_style{
+        gap: 16px;
+        width: 68vw;
+    }
+
+    .A_Image_description{
+        gap: 16px;
+    }
+
+
+    .W_title_block{
+        gap: 48px;
+    }
+
+    .M_about_image{
+        gap: 40px;
+    }
+
+    .Q_video{
+        height: 120vw;
+    }
+
+    .M_criteria_author{
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: 24px;
+    }
+
+    // Музыка
+    .SO_music_block{
+        padding: 48px 28px 28px 28px;
+        width: 100%;
+        gap: 56px;
+    }
+
+    .A_text_music{
+        flex-direction: column;
+        gap: 16px;
+
+        p{
+            text-align: left;
+        }
+
+        h5{
+            max-width: 100%;
+        }
+    }
+
+    .O_track{
+        width: 78vw;
+        height: 64vw;
+    }
+
+    .M_image_name_text{
+        flex-direction: column;
+    }
+
+    .Q_Image_track{
+        height: 32vw;
+    }
+
+    .Q_audio{
+        width: 68vw;
+    }
+
+    .M_image_name_text{
+        gap: 24px;
+    }
+
+    // Желания
+    .O_desire_all{
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .M_desire_column{
+        gap: 24px;
+    }
+
+    .M_video_author_little{
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+    }
+
+    .Q_video_little{
+        height: 80vw;
+    }
+
+    // Одежда
+
+    .A_text_cloth{
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+
+        h5{
+            width: 100%;
+            max-width: 94%;
+        }
+
+        p{
+            text-align: left;
+        }
+    }
+
+    .Q_Image_cloth{
+        width: 180px;
+    }
+
+    // За кем следить
+    .M_name{
+        flex-direction: column;
+        gap: 32px;
+        height: auto;
+    }
+
+    .A_desire{
+        width: 100%;
+        height: auto;
+        gap: 8px;
+    }
+
+    .C_padding_also{
+        width: 88vw;
+        margin-left: 6vw;
+        margin-top: 100px;
+        gap: 80px;
+
+        .A_title_icon{
+            width: 88vw;
+
+            h3{
+                max-width: 70%;
+            }
+        }
+    }
+
+    .C_also_card{
+        width: 88vw;
+        gap: 48px;
+    }
+
+    // Стр медиа
+    .C_title_cataloge{
+        gap: 48px;
+    }
+
+
+    .A_title_icon_h2{
+        align-items: end;
+        width: 88vw;
+        margin: 0 auto;
+        margin-top: 100px;
+
+        h2{
+            max-width: 70%;
+        }
+    }
+
+    .C_padding_block{
+        width: 88vw;
+        margin-left: 6vw;
+        margin-top: 56px;
+        gap: 80px;
+    }
+
+    .C_first_media_art{
+        margin-top: 0;
+        padding: 14vw 4vw 10vw 4vw;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    // первый блок медиа
+    .M_card_about_service_big{
+        width: 80vw;
+        height: 76vw;
+        border-radius: 6px;
+        padding: 20px;
+
+        h4{
+            max-width: 100%;
+        }
+
+        .Q_cover_media{
+            width: 48vw;
+            height: 24vw;
+        }
+    }
+
+    .M_card_about_service_little{
+        width: 80vw;
+        height: 72vw;
+        border-radius: 6px;
+        padding: 20px;
+
+        h4{
+            max-width: 100%;
+        }
+
+        .Q_cover_media{
+            width: 48vw;
+            height: 24vw;
+        }
+    }
+
+    .C_card_about_service{
+        width: 80vw;
+        gap: 16px;
+    }
+
+    .M_cover_art_title_selection{
+        width: 88vw;
+        margin: 0 auto;
+        margin-bottom: 64px;
+
+        background-position: 80%;
+    }
+
+
+
+
+
+    // Статьи медиа
+    .M_card_cataloge_media{
+        width: 88vw;
+        height: 76vw;
+        padding: 24px;
+    }
+
+    .C_media_cards{
+        width: 88vw;
+        gap: 8vw;
+    }
+
+    .A_tag_time{
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .C_tag_title_time{
+        gap: 32px;
+    }
+
+    .Q_cover_media{
+        width: 56vw;
+        height: 28vw;
+    }
+
+    // подборки медиа
+    .M_selection_card{
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .O_selection{
+        flex-direction: column;
+        gap: 4vw;
+        padding: 4vw;
+        width: 88vw;
+    }
+
+    .C_selection{
+        gap: 48px;
+    }
+
+
+    // карточка помощника
+    .O_helper_card{
+        width: 88vw;
+        height: 860px;
+    }
+
+
+    .M_title_helper{
+        width: 80vw;
+    }
+
+    .Q_img_help_mus, .Q_img_help_des{
+        width: 54vw;
+    }
+
+    .Q_img_help_des{
+        top: -5vw;
+        right: -8vw;
+    }
+
+    // страница статьи
+    .M_cover_art_title{
+        width: 88vw;
+        margin: 0 auto;
+        padding: 24px;
+
+        .Q_tag_media_op{
+            display: none;
+        }
+
+        background-position: 72%;
+    }
+
+    .C_tag_art_cover{
+        gap: 8px;
+    }
+
+    .C_content_article{
+        margin-top: 64px;
+        width: 88vw;
+        gap: 80px;
+        margin-bottom: 120px;
+    }
+
+    .A_title_text_art{
+        gap: 48px;
+    }
+
+    .C_par_text{
+        gap: 32px;
+    }
+
+    .С_img_link_two{
+        flex-direction: column;
+        gap: 48px;
+    }
+
+
+
+
+
+    
+
+
+    // Футер
+    .C_footer{
+        padding-top: 56px;
+    }
+
+    .C_clmn_f{
+        width: 40vw;
+    }
+
+    .A_f_bl_rext{
+        width: 88vw;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .O_f_all_text{
+        gap: 32px;
+    }
+
+
+
+}
+
+
+
+// 320-374
+@media screen and (max-width: 432px){
+    body, html{
+    margin: 0 auto;
+    background-color: var(--white-body);
+    width: 100vw;
+    overflow-x: hidden;
+    height: 100%;
+   
+    }
+    h1, h1 span{
+        font-size: 34px;
+    }
+
+    h2, h2 span{
+        font-size: 28px;
+    }
+
+    h3, h3 span{
+        font-size: 24px;
+    }
+
+    h4, h4 span{
+        font-size: 22px;
+    }
+
+    h5, h5 span{
+        font-size: 20px;
+    }
+
+    h6, h6 span{
+        font-size: 18px;
+    }
+
+    p, p span{
+        font-size: 16px;
+    }
+
+    .Q_h2_d{
+        margin-top: 140px;
+    }
+
+    .A_back_arrow{
+        margin-left: 6vw;
+        margin-top: 88px;
+        margin-bottom: 40px;
+    }
+
+    .Q_line{
+        width: 4px;
+    }
+
+    .A_menu{
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    .A_title_icon{
+        align-items: end;
+    }
+
+    // Справочник
+    .O_card_style{
+        width: 88vw;
+        padding: 32px 24px 32px 24px;
+    }
+
+    .SO_catalog_style{
+        width: 88vw;
+        margin: 0 auto;
+        gap: 6vw;
+    }
+
+    .Q_h2_d{
+        margin-top: 120px;
+    }
+
+    .C_block_margin{
+        margin-top: 64px;
+    }
+
+    // Каталог желаний
+    .C_title_desire{
+        width: 88vw;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .C_desire_cataloge{
+        width: 88vw;
+        align-items: center;
+        margin: 0 auto;
+        gap: 8vw;
+        margin-top: 48px;
+    }
+
+    .A_des_card{
+        width: 88vw;
+        padding-top: 5vw;
+        padding-bottom: 10vw;
+    }
+
+    .Q_img_des{
+        width: 78vw;
+    }
+
+    // Страницы стилей
+
+    .C_content_style{
+        width: 88vw;
+        margin: 0 auto;
+        gap: 80px;
+        height: auto;
+    }
+
+    .W_1_block_style{
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .A_about_style{
+        gap: 16px;
+    }
+
+    .A_Image_description{
+        gap: 16px;
+    }
+
+
+    .W_title_block{
+        gap: 48px;
+    }
+
+    .M_about_image{
+        gap: 40px;
+    }
+
+    .Q_video{
+        height: 120vw;
+    }
+
+    .M_criteria_author{
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: 24px;
+    }
+
+    // Музыка
+    .SO_music_block{
+        padding: 48px 28px 28px 28px;
+        width: 100%;
+        gap: 56px;
+    }
+
+    .A_text_music{
+        flex-direction: column;
+        gap: 16px;
+
+        p{
+            text-align: left;
+        }
+
+        h5{
+            max-width: 100%;
+        }
+    }
+
+    .O_track{
+        width: 78vw;
+        height: 78vw;
+    }
+
+    .M_image_name_text{
+        flex-direction: column;
+    }
+
+    .Q_Image_track{
+        height: 32vw;
+    }
+
+    .Q_audio{
+        width: 68vw;
+    }
+
+    .M_image_name_text{
+        gap: 24px;
+    }
+
+    // Желания
+    .O_desire_all{
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .M_desire_column{
+        gap: 24px;
+    }
+
+    .M_video_author_little{
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+    }
+
+    .Q_video_little{
+        height: 80vw;
+    }
+
+    // Одежда
+
+    .A_text_cloth{
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+
+        h5{
+            width: 100%;
+            max-width: 94%;
+        }
+
+        p{
+            text-align: left;
+        }
+    }
+
+    .Q_Image_cloth{
+        width: 180px;
+    }
+
+    // За кем следить
+    .M_name{
+        flex-direction: column;
+        gap: 32px;
+        height: auto;
+    }
+
+    .A_desire{
+        width: 100%;
+        height: auto;
+        gap: 8px;
+    }
+
+    .C_padding_also{
+        width: 88vw;
+        margin-left: 6vw;
+        margin-top: 100px;
+        gap: 80px;
+
+        .A_title_icon{
+            width: 88vw;
+
+            h3{
+                max-width: 70%;
+            }
+        }
+    }
+
+    .C_also_card{
+        width: 88vw;
+        gap: 48px;
+    }
+
+    // Стр медиа
+    .C_title_cataloge{
+        gap: 48px;
+    }
+
+
+    .A_title_icon_h2{
+        align-items: end;
+        width: 88vw;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+
+    .C_padding_block{
+        width: 88vw;
+        margin-left: 6vw;
+        margin-top: 56px;
+        gap: 80px;
+    }
+
+    .C_first_media_art{
+        margin-top: 0;
+        padding: 14vw 4vw 10vw 4vw;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    // первый блок медиа
+    .M_card_about_service_big{
+        width: 80vw;
+        height: 84vw;
+        border-radius: 6px;
+        padding: 20px;
+
+        h4{
+            max-width: 100%;
+        }
+
+        .Q_cover_media{
+            width: 48vw;
+            height: 24vw;
+        }
+    }
+
+    .M_card_about_service_little{
+        width: 80vw;
+        height: 84vw;
+        border-radius: 6px;
+        padding: 20px;
+
+        h4{
+            max-width: 100%;
+        }
+
+        .Q_cover_media{
+            width: 48vw;
+            height: 24vw;
+        }
+    }
+
+    .C_card_about_service{
+        width: 80vw;
+        gap: 16px;
+    }
+
+
+
+
+
+    // Статьи медиа
+    .M_card_cataloge_media{
+        width: 88vw;
+        height: 86vw;
+        padding: 24px;
+    }
+
+    .C_media_cards{
+        width: 88vw;
+        gap: 8vw;
+    }
+
+    .A_tag_time{
+        flex-direction: column;
+        align-items: start;
+        gap: 12px;
+    }
+
+    .C_tag_title_time{
+        gap: 18px;
+    }
+
+    .Q_cover_media{
+        width: 56vw;
+        height: 28vw;
+    }
+
+    // подборки медиа
+    .M_selection_card{
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .O_selection{
+        flex-direction: column;
+        gap: 4vw;
+        padding: 4vw;
+        width: 88vw;
+    }
+
+    .C_selection{
+        gap: 48px;
+    }
+
+
+    // карточка помощника
+    .O_helper_card{
+        width: 88vw;
+        height: 700px;
+    }
+
+
+    .M_title_helper{
+        width: 80vw;
+    }
+
+    .Q_img_help_mus, .Q_img_help_des{
+        width: 54vw;
+    }
+
+    .Q_img_help_des{
+        top: -5vw;
+        right: -8vw;
+    }
+
+    // страница статьи
+    .M_cover_art_title{
+        width: 88vw;
+        margin: 0 auto;
+        padding: 24px;
+
+        .Q_tag_media_op{
+            display: none;
+        }
+
+        background-position: 72%;
+    }
+
+    .C_tag_art_cover{
+        gap: 8px;
+    }
+
+    .C_content_article{
+        margin-top: 64px;
+        width: 88vw;
+        gap: 80px;
+    }
+
+    .A_title_text_art{
+        gap: 48px;
+    }
+
+    .C_par_text{
+        gap: 32px;
+    }
+
+    .С_img_link_two{
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    
+
+
+    // Футер
+    .C_footer{
+        padding-top: 56px;
+    }
+
+    .C_clmn_f{
+        width: 40vw;
+    }
+
+    .A_f_bl_rext{
+        width: 88vw;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .O_f_all_text{
+        gap: 32px;
+    }
+
+
+
+}

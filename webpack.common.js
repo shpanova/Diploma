@@ -14,8 +14,9 @@ module.exports = {
     style: './src/style.js'
   },
   output: {
-    filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'docs')
+  filename: '[name].[contenthash].js',
+  path: path.resolve(__dirname, 'docs'),
+  publicPath: '/my-site/',   // явный корень — на случай, если 'auto' не сработал
   },
   module: {
     rules: [

@@ -74,10 +74,15 @@
     flex-direction: column;
     align-items: center;
     width: 21vw;
-    background-image: url('https://raw.githubusercontent.com/shpanova/Diploma/refs/heads/main/src/images/articles/Cover1.jpg');
     border-radius: 8px;
     height: 21vw;
     padding-top: 40px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-size: cover;
+
 }
 
 .O_selection{
@@ -178,6 +183,10 @@
     height: 9vw;
     border-radius: 4px;
     border-right: 14px solid var(--orange-accent);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-size: cover;
 }
 
 .A_img_button_cataloge{
